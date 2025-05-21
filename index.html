@@ -381,6 +381,20 @@
       }
     }
 
+    /* Solo hover en escritorio */
+    @media (min-width: 601px) {
+      .menu-desplegable:hover .menu-contenido {
+        display: block;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu-contenido {
+        display: none;
+        position: absolute;
+      }
+    }
+
     .menu-desplegable:hover .menu-contenido {
       display: block;
     }
@@ -502,7 +516,7 @@
 
   <div class="seccion1">
     <div class="menu-desplegable">
-      <button class="menu-boton">...</button>
+      <button class="menu-boton" id="menu-boton" onclick="toggleMenu()">...</button>
       <div class="menu-contenido" id="menu-contenido">
         <a href="#inicio" class="menu-link" onclick="cerrarMenu()">
           <h1 class="menu-title">Inicio</h1>
@@ -517,26 +531,31 @@
       </div>
     </div>
     <script>
-      // Cierra el menú al seleccionar una opción en móvil o escritorio
+      // Alterna el menú en móvil
+      function toggleMenu() {
+        var menu = document.getElementById('menu-contenido');
+        if (window.innerWidth <= 600) {
+          if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+          } else {
+            menu.style.display = 'block';
+          }
+        }
+      }
+      // Cierra el menú al seleccionar una opción en móvil
       function cerrarMenu() {
         var menu = document.getElementById('menu-contenido');
         if (window.innerWidth <= 600) {
           menu.style.display = 'none';
-          setTimeout(function() {
-            menu.style.display = '';
-          }, 400); // Permite volver a abrir el menú después de navegar
         }
       }
-      // Opcional: cerrar menú al hacer click fuera (solo móvil)
+      // Cerrar menú al hacer click fuera (solo móvil)
       document.addEventListener('click', function(e) {
         var menu = document.getElementById('menu-contenido');
-        var boton = document.querySelector('.menu-boton');
+        var boton = document.getElementById('menu-boton');
         if (window.innerWidth <= 600 && menu && boton) {
           if (!menu.contains(e.target) && !boton.contains(e.target)) {
             menu.style.display = 'none';
-            setTimeout(function() {
-              menu.style.display = '';
-            }, 400);
           }
         }
       });
@@ -665,7 +684,7 @@
       <span>Contactos</span>
     </div>
 
-    <div class="cuadro-dorado" id="redes">
+    <div class="cuadro-dorado" id="redes" style="margin-left:0; width:74%; max-width:74vw; padding:20px 38px;">
       <p><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
       <p><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
     </div>

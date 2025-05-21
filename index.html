@@ -251,12 +251,139 @@
       display: inline-block;
       vertical-align: middle;
     }
+
+    /* Menú desplegable personalizado */
+    .menu-desplegable {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      display: inline-block;
+      z-index: 1000;
+    }
+
+    .menu-boton {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .menu-contenido {
+      display: none;
+      position: absolute;
+      background: linear-gradient(135deg, #ffe9b3 0%, #dfbb77 60%, #fff6e0 100%);
+      min-width: 250px;
+      box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.18);
+      padding: 18px 20px 18px 20px;
+      z-index: 20;
+      border-radius: 18px;
+      right: 0;
+      border: 2px solid #ffce00;
+      backdrop-filter: blur(2px);
+      animation: menuFadeIn 0.4s;
+    }
+
+    @keyframes menuFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-16px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .menu-desplegable:hover .menu-contenido {
+      display: block;
+    }
+
+    .menu-contenido h1,
+    .menu-contenido h3,
+    .menu-contenido h4,
+    .menu-contenido .cuadro-dorado {
+      margin: 10px 0;
+    }
+
+    .menu-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+
+    .menu-title {
+      color: #003366;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 1.35em;
+      letter-spacing: 1.5px;
+      text-shadow: none;
+      background: #dfbb77;
+      border-radius: 8px;
+      padding: 10px 22px;
+      transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 16px rgba(78, 84, 200, 0.18);
+      border: 2px solid #ffce00;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .menu-title:hover {
+      background: #ffe066;
+      color: #ff9900;
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(255, 206, 0, 0.25);
+    }
+
+    .menu-contenido h1,
+    .menu-contenido h3,
+    .menu-contenido h4 {
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .menu-contenido h1:hover,
+    .menu-contenido h3:hover,
+    .menu-contenido h4:hover,
+    .cuadro-dorado:hover {
+      color: #ff9900;
+    }
+
+    .menu-contenido .cuadro-dorado {
+      background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+      color: #333;
+      padding: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      border: 2px solid #ffce00;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="seccion1"></div>
+  <div class="seccion1">
+    <div class="menu-desplegable">
+      <button class="menu-boton">...</button>
+      <div class="menu-contenido">
+        <a href="#inicio" class="menu-link">
+          <h1 class="menu-title">Inicio</h1>
+        </a>
+        <a href="#inscripcion" class="menu-link">
+          <h3 class="menu-title">Inscripción</h3>
+        </a>
+        <a href="#foros" class="menu-link">
+          <h4 class="menu-title">Foros</h4>
+        </a>
+        <a href="#redes" class="menu-link"><h4 class="menu-title">Redes Sociales</h4></a>
+      </div>
+    </div>
+  </div>
 
   <div class="contenido-principal">
     <div class="centrado" id="inicio">
@@ -380,7 +507,7 @@
       <span>Contactos</span>
     </div>
 
-    <div class="cuadro-dorado" id="redes">
+    <div class="cuadro-dorado" id="redes" style="background:none; box-shadow:none; padding-left:0; padding-right:0;">
       <p><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
       <p><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
     </div>
@@ -395,9 +522,8 @@
       <img src="img/tiktok.jpeg" alt="TikTok Logo">
       BOLMUN CHRISTA TikTok
     </a>
-
   </div>
-  <script src="animaciones.js"></script>
+
 </body>
 
 </html>

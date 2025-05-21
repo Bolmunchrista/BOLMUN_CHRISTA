@@ -362,7 +362,31 @@
       border: 2px solid #ffce00;
     }
 
+    /* Ajuste específico para el cuadro de redes sociales (contactos) */
+    .cuadro-dorado#redes,
+    #redes {
+      margin-left: 0;
+      width: 74%;
+      max-width: 74vw;
+    }
+
+    /* Mover los botones de redes sociales a la derecha */
+    .redes-sociales-botones {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 13%;
+      margin-right: 0;
+      margin-top: 0;
+      gap: 10px;
+    }
+
     @media (max-width: 600px) {
+      .redes-sociales-botones {
+        margin-left: 3%;
+        margin-right: 0;
+      }
+
       .menu-desplegable {
         top: 6px;
         right: 6px;
@@ -383,6 +407,16 @@
         font-size: 0.95em;
         padding: 6px 6px;
         border-radius: 5px;
+      }
+
+      .cuadro-dorado#redes {
+        margin-left: 16px;
+        width: calc(100% - 32px);
+        max-width: calc(100vw - 32px);
+      }
+
+      #redes {
+        margin-left: 6vw;
       }
     }
   </style>
@@ -534,18 +568,18 @@
       <p><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
       <p><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
     </div>
-    <p><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca del BOLMUN CHRISTA
-        2025:</strong></p>
+    <p><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca del BOLMUN CHRISTA 2025:</strong></p>
+    <div class="redes-sociales-botones">
+      <a href="https://www.instagram.com/bolmun_christa/" target="_blank" class="boton-instagram">
+        <img src="img/Instagram.jpeg" alt="Instagram Logo">
+        BOLMUN CHRISTA 2025
+      </a>
+      <a href="https://www.tiktok.com/@bolmun_christa?is_from_webapp=1&sender_device=pc" target="_blank" class="boton-tiktok">
+        <img src="img/tiktok.jpeg" alt="TikTok Logo">
+        BOLMUN CHRISTA TikTok
+      </a>
     </div>
-    <a href="https://www.instagram.com/bolmun_christa/" target="_blank" class="boton-instagram">
-      <img src="img/Instagram.jpeg" alt="Instagram Logo">
-      BOLMUN CHRISTA 2025
-    </a>
-    <a href="https://www.tiktok.com/@bolmun_christa?is_from_webapp=1&sender_device=pc" target="_blank"
-      class="boton-tiktok">
-      <img src="img/tiktok.jpeg" alt="TikTok Logo">
-      BOLMUN CHRISTA TikTok
-    </a>
+  </div>
 
 </body>
 

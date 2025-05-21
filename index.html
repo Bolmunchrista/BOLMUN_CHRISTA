@@ -251,15 +251,107 @@
       display: inline-block;
       vertical-align: middle;
     }
+
+    /* Menú desplegable personalizado */
+    .menu-desplegable {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      display: inline-block;
+      z-index: 1000;
+    }
+
+    .menu-boton {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    }
+
+    .menu-contenido {
+      display: none;
+      position: absolute;
+      background-color: #dfbb77;
+      min-width: 230px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 20;
+      border-radius: 6px;
+      right: 0;
+    }
+
+    .menu-desplegable:hover .menu-contenido {
+      display: block;
+    }
+
+    .menu-contenido h1,
+    .menu-contenido h3,
+    .menu-contenido h4 {
+      color: #003366;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 1.25em;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 6px #fff6e0, 0 2px 8px #bfa76a33;
+      background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+      border-radius: 6px;
+      padding: 6px 18px;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(78, 84, 200, 0.10);
+    }
+
+    .menu-contenido h1:hover,
+    .menu-contenido h3:hover,
+    .menu-contenido h4:hover {
+      background: linear-gradient(90deg, #ffd700 0%, #ffe066 100%);
+      color: #ff9900;
+      transform: scale(1.05);
+    }
+
+    .menu-contenido .cuadro-dorado {
+      background: linear-gradient(90deg, #ffe066 0%, #ffd700 100%);
+      color: #333;
+      padding: 10px;
+      border-radius: 4px;
+      font-weight: bold;
+      border: 2px solid #ffce00;
+    }
+
+    .menu-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      font-weight: bold;
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="seccion1"></div>
+  <div class="seccion1">
+    <div class="menu-desplegable">
+      <button class="menu-boton">...</button>
+      <div class="menu-contenido">
+        <a href="#inicio" class="menu-link">
+          <h1>Inicio</h1>
+        </a>
+        <a href="#inscripcion" class="menu-link">
+          <h3>Inscripción</h3>
+        </a>
+        <a href="#foros" class="menu-link">
+          <h4>Foros</h4>
+        </a>
+        <a href="#redes" class="menu-link"><h4>Redes Sociales</h4></a>
+      </div>
+    </div>
+  </div>
 
   <div class="contenido-principal">
-    <div class="centrado">
+    <div class="centrado" id="inicio">
       <h1>BOLMUN CHRISTA</h1>
       <img src="img/bolmun.jpeg" alt="Logo BOLMUN CHRISTA" class="logo">
     </div>
@@ -286,7 +378,7 @@
       humanos, medioambiente, género y justicia internacional.
     </p>
 
-    <h3>PARTICIPANTES</h3>
+    <h3 id="inscripcion">PARTICIPANTES</h3>
     <p>
       Pueden participar estudiantes del nivel secundario y universitario hasta el tercer semestre.
       Inscripciones en el siguiente enlace o escaneando el código QR:
@@ -297,8 +389,8 @@
       <a href="https://forms.gle/AymvhALA5L55XWJf6" target="_blank" class="boton-formulario">Formulario de
         Inscripción</a>
     </div>
-    <h3><strong>Inversión: Bs 200</h3>
-    <p>Incluye:</strong></p>
+    <h3><strong>Inversión: Bs 200</strong></h3>
+    <p>Incluye:</p>
     <li>Alimentación (desayuno, almuerzo y merienda)</li>
     <li>Certificado de participación</li>
     <li>Certificado y trofeo para ganadores</li>
@@ -310,7 +402,7 @@
       <span>FOROS Y TEMÁTICAS</span>
     </div>
 
-    <div class="text-center">
+    <div class="text-center" id="foros">
       <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
       <img src="img/foro 1.jpg" alt="FORO 1" class="logo">
 
@@ -380,7 +472,7 @@
       <span>Contactos</span>
     </div>
 
-    <div class="cuadro-dorado">
+    <div class="cuadro-dorado" id="redes">
       <p><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
       <p><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
     </div>
@@ -395,7 +487,8 @@
       <img src="img/tiktok.jpeg" alt="TikTok Logo">
       BOLMUN CHRISTA TikTok
     </a>
-
+  </div>
+  <script src="animaciones.js"></script>
 </body>
 
 </html>

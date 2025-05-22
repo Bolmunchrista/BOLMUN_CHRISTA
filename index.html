@@ -24,7 +24,8 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      height: 200px;
+      height: 175px;
+      padding: 10px;
       position: relative;
       margin-bottom: 20px;
     }
@@ -34,8 +35,8 @@
     }
 
     img.logo {
-      width: 200px;
-      max-width: 90vw;
+      width: 90vw;
+      max-width: 250px;
       height: auto;
     }
 
@@ -53,11 +54,13 @@
     }
 
     .separador-rect {
-      width: 500px;
-      height: 40px;
-      margin: 40px auto 30px auto;
-      background: rgb(0, 74, 171);
-      border-radius: 0px;
+      width: 90vw;
+      min-width: 120px;
+      max-width: 320px;
+      height: 28px;
+      margin: 30px auto 18px auto;
+      border-radius: 8px;
+      background: #004aab;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -65,7 +68,7 @@
 
     .separador-rect span {
       color: #dfbb77;
-      font-size: 1.4em;
+      font-size: 1em;
       font-weight: bold;
       letter-spacing: 2px;
     }
@@ -226,19 +229,19 @@
       width: 74%;
       max-width: 74vw;
       margin: 32px 0 18px 0;
-      background: linear-gradient(90deg, #ffe9b3 0%, #dfbb77 60%, #fff6e0 100%);
+      background-color: #003366;
       border-radius: 10px;
       display: flex;
       align-items: center;
       justify-content: flex-start;
       padding-left: 24px;
       box-shadow: 0 2px 8px rgba(223, 187, 119, 0.13);
-      border: 2px solid #ffce00;
+      border: 2px solid #003366ee;
       font-size: 1.1em;
     }
 
     .separador-ancho span {
-      color: #003366;
+      color: #dfbb77;
       font-weight: bold;
       letter-spacing: 1.5px;
     }
@@ -523,7 +526,74 @@
         padding: 10px 0 7px 0;
       }
     }
+
+    .foros-tematicas-centrado {
+      text-align: center;
+      margin: 0 auto 24px auto;
+      max-width: 700px;
+    }
+
+    .foros-tematicas-centrado h4 {
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .foros-tematicas-centrado img.logo {
+      display: block;
+      margin: 0 auto 10px auto;
+      max-width: 220px;
+      width: 90vw;
+    }
+
+    .foros-tematicas-centrado li {
+      list-style: none;
+      margin: 0 0 8px 0;
+      padding: 0;
+      font-size: 1.05em;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .foros-tematicas-centrado {
+        max-width: 99vw;
+        padding: 0 2vw 0 2vw;
+        margin: 0 auto 18px auto;
+        text-align: center;
+      }
+
+      .foros-tematicas-centrado h4 {
+        margin-top: 22px;
+        margin-bottom: 7px;
+        font-size: 1.09em;
+        line-height: 1.25;
+        text-align: center;
+        padding: 0 2vw;
+      }
+
+      .foros-tematicas-centrado img.logo {
+        display: block;
+        margin: 0 auto 7px auto;
+        max-width: 94vw;
+        width: 94vw;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px #00336622;
+      }
+
+      .foros-tematicas-centrado li {
+        font-size: 0.99em;
+        margin-bottom: 8px;
+        text-align: center;
+        padding: 0 2vw;
+        word-break: break-word;
+        list-style: none;
+      }
+
+      .foros-tematicas-centrado li strong {
+        font-weight: 600;
+      }
+    }
   </style>
+  <script src="animaciones.js"></script>
 </head>
 
 <body>
@@ -544,7 +614,10 @@
         <a href="secretariado.html" class="menu-link" onclick="cerrarMenu()">
           <h4 class="menu-title">Secretariado</h4>
         </a>
-        <a href="#redes" class="menu-link" onclick="cerrarMenu()"><h4 class="menu-title">Redes Sociales</h4></a>
+        <a href="#redes" class="menu-link"
+          onclick="cerrarMenu(); setTimeout(function(){document.getElementById('redes').scrollIntoView({behavior: 'smooth'});}, 100); return false;">
+          <h4 class="menu-title">Redes Sociales</h4>
+        </a>
       </div>
     </div>
     <script>
@@ -567,7 +640,7 @@
         }
       }
       // Cerrar menú al hacer click fuera (solo móvil)
-      document.addEventListener('click', function(e) {
+      document.addEventListener('click', function (e) {
         var menu = document.getElementById('menu-contenido');
         var boton = document.getElementById('menu-boton');
         if (window.innerWidth <= 600 && menu && boton) {
@@ -631,56 +704,43 @@
       <span>FOROS Y TEMÁTICAS</span>
     </div>
 
-    <div class="text-center" id="foros">
+    <div id="foros" class="foros-tematicas-centrado">
       <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
       <img src="img/foro 1.jpg" alt="FORO 1" class="logo">
-
       <li><strong>Problemáticas en el suministro de combustibles y su impacto social</strong></li>
       <li><strong>Disponibilidad de divisas internacionales y su influencia en la economía</strong></li>
-
       <h4><strong>FORO 2: Migración Forzada y Política Internacional</strong></h4>
       <img src="img/foro 2.jpg" alt="FORO 2" class="logo">
-
       <li><strong>Impacto del nuevo mandato presidencial en EE. UU. en políticas migratorias</strong></li>
       <li><strong>Causas y consecuencias de los desplazamientos forzados</strong></li>
-
       <h4><strong>FORO 3: Ciberseguridad y Sociedad Digital</strong></h4>
       <img src="img/foro 3.jpg" alt="FORO 3" class="logo">
-
       <li><strong>Ciberacoso: causas, consecuencias y prevención</strong></li>
       <li><strong>Protección de datos y rol del sector empresarial</strong></li>
-
       <h4><strong>FORO 4: Igualdad de Género y Derechos Humanos (ONU Mujeres)</strong></h4>
       <img src="img/foro 4.jpg" alt="FORO 4" class="logo">
       <li><strong>Acceso a la interrupción voluntaria del embarazo</strong></li>
       <li><strong>Violencia de género extrema: causas y estrategias de erradicación</strong></li>
-
       <h4><strong>FORO 5: Medioambiente y Sostenibilidad (PNUMA)</strong></h4>
       <img src="img/foro 5.jpeg" alt="FORO 5" class="logo">
-
       <li><strong>Deforestación y su impacto en ecosistemas</strong></li>
       <li><strong>Contaminación plástica y alternativas sostenibles</strong></li>
-
       <h4><strong>FORO 6: Educación Rural y Equidad (foro departamental)</strong></h4>
       <img src="img/foro 6.jpeg" alt="FORO6" class="logo">
       <li><strong>Brecha digital en zonas rurales del Beni</strong></li>
       <li><strong>Presupuesto y calidad educativa en áreas alejadas</strong></li>
-
       <h4><strong>FORO 7: Salud Sexual y Reproductiva</strong></h4>
       <img src="img/foro 7.jpg" alt="FORO 7" class="logo">
       <li><strong>Prevención de ETS y acceso a anticonceptivos</strong></li>
       <li><strong>Diagnóstico de ETS en comunidades LGBTQ+ migrantes</strong></li>
-
       <h4><strong>FORO 8: Conflictos Sociopolíticos y Seguridad Global</strong></h4>
       <img src="img/foro 8.jpeg" alt="FORO 8" class="logo">
       <li><strong>Grupos extremistas y estabilidad internacional</strong></li>
       <li><strong>Regiones con tensión prolongada</strong></li>
-
       <h4><strong>FORO 9: Perspectivas de la Economía Global</strong></h4>
       <img src="img/foro 9.jpeg" alt="FORO 9" class="logo">
       <li><strong>Retos económicos en países en desarrollo</strong></li>
       <li><strong>Criptomonedas en economías emergentes</strong></li>
-
       <h4><strong>FORO 10: Infancia, Derechos y Medioambiente (UNICEF)</strong></h4>
       <img src="img/foro 10.jpeg" alt="FORO 10" class="logo">
       <li><strong>Contaminación por incendios forestales y salud infantil</strong></li>
@@ -691,38 +751,43 @@
       <span>Información Adicional</span>
     </div>
 
-    <div class="cuadro-dorado">
-      <li><strong>Todos los participantes recibirán capacitaciones previas al debate.</li>
+    <div
+      style="background:#dfbb77; color:#003366; border-radius:12px; padding:18px 18px 12px 18px; margin:18px 0 24px 0; font-weight:bold; font-size:1.08em; box-shadow:0 2px 8px #dfbb7740;">
+      <li><strong>Todos los participantes recibirán capacitaciones previas al debate.</strong></li>
       <li>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</li>
-      <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento.</strong></li>
+      <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento.</li>
     </div>
 
     <div class="separador-ancho">
       <span>Contactos</span>
     </div>
 
-    <div class="cuadro-dorado" id="redes" style="margin-left:0; width:74%; max-width:74vw; padding:20px 38px;">
+    <div
+      style="background:#dfbb77; color:#003366; border-radius:12px; padding:18px 18px 12px 18px; margin:18px 0 24px 0; font-weight:bold; font-size:1.08em; box-shadow:0 2px 8px #dfbb7740;">
       <p><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
       <p><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
     </div>
-    <div class="separador-ancho">
+
+    <div class="separador-ancho" id="redes">
       <span>Redes Sociales</span>
     </div>
-    <p><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca del BOLMUN CHRISTA 2025:</strong></p>
+    <p><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca del BOLMUN CHRISTA
+        2025:</strong></p>
     <div class="redes-sociales-botones">
       <a href="https://www.instagram.com/bolmun_christa/" target="_blank" class="boton-instagram">
         <img src="img/Instagram.jpeg" alt="Instagram Logo">
         BOLMUN CHRISTA 2025
       </a>
-      <a href="https://www.tiktok.com/@bolmun_christa?is_from_webapp=1&sender_device=pc" target="_blank" class="boton-tiktok">
+      <a href="https://www.tiktok.com/@bolmun_christa?is_from_webapp=1&sender_device=pc" target="_blank"
+        class="boton-tiktok">
         <img src="img/tiktok.jpeg" alt="TikTok Logo">
         BOLMUN CHRISTA TikTok
       </a>
     </div>
   </div>
   <footer>
-        <p>&copy; 2025 BOLMUN CHRISTA.</p>
-    </footer>
+    <p>&copy; 2025 BOLMUN CHRISTA.</p>
+  </footer>
 </body>
 
 </html>

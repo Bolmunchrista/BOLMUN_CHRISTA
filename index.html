@@ -839,6 +839,38 @@
         padding-right: 2vw;
       }
     }
+
+    /* --- Ajuste: los fondos de los títulos h2, h3, h4 ocupan el ancho completo del bloque padre --- */
+    .saludo-titulo-fondo,
+    .onu-titulo-fondo,
+    .participantes-titulo-fondo,
+    .inversion-titulo-fondo,
+    .info-titulo-fondo,
+    .contactos-titulo-fondo,
+    .redes-titulo-fondo {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      border-radius: 14px 14px 0 0;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    @media (max-width: 600px) {
+      .saludo-titulo-fondo,
+      .onu-titulo-fondo,
+      .participantes-titulo-fondo,
+      .inversion-titulo-fondo,
+      .info-titulo-fondo,
+      .contactos-titulo-fondo,
+      .redes-titulo-fondo {
+        border-radius: 9px 9px 0 0;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
   </style>
   <script src="animaciones.js"></script>
 </head>
@@ -925,7 +957,7 @@
   <!-- Saludo en cuadro dorado centrado, sin fondo azul -->
   <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
     <div class="saludo-titulo-fondo"
-      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #b6c6f5 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
       <h2 class="saludo-titulo"
         style="margin:0; color:#fff; font-size:1.22em; letter-spacing:1.1px; font-weight:bold; text-align:left;">
         Estimados Delegados:</h2>
@@ -940,7 +972,7 @@
   <!-- ¿Qué son los modelos ONU? -->
   <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
     <div class="onu-titulo-fondo"
-      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #6e8adf 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
       <h3 class="onu-titulo"
         style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold; text-align:left;">¿QUÉ
         SON LOS MODELOS ONU?</h3>
@@ -958,7 +990,7 @@
   <!-- Participantes -->
   <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
     <div class="participantes-titulo-fondo"
-      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #a1c4fd 100%); box-shadow: 0 2px 8px #23305a33; text-align:center;">
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); box-shadow: 0 2px 8px #23305a33; text-align:center;">
       <h3 class="participantes-titulo"
         style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold; text-align:center;">
         PARTICIPANTES</h3>
@@ -1105,7 +1137,7 @@
   <!-- Contactos -->
   <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 32px auto; text-align:center;">
     <div class="contactos-titulo-fondo"
-      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #7bbfae 100%); box-shadow: 0 2px 8px #23305a33;">
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #5e81c8 100%); box-shadow: 0 2px 8px #23305a33;">
       <h3 class="contactos-titulo"
         style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold;">Contactos</h3>
     </div>

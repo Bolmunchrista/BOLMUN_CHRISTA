@@ -15,7 +15,311 @@
       margin: 0;
       line-height: 1.6;
       padding: 0;
-      background-color: #ffffff;
+      background-color: #fff;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* --- Separadores decorativos --- */
+    .decorador-seccion {
+      width: 100%;
+      height: 18px;
+      background: linear-gradient(90deg, #004aab 0%, #dfbb77 100%);
+      border-radius: 0 0 18px 18px;
+      margin: 32px 0 18px 0;
+      box-shadow: 0 2px 8px #dfbb7740;
+      opacity: 0.7;
+    }
+
+    /* --- Cuadros mejorados --- */
+    .cuadro-dorado,
+    .cuadro-info {
+      background: linear-gradient(90deg, #fff6e0 60%, #ffe9b3 100%);
+      color: #003366;
+      border-radius: 14px;
+      padding: 18px 18px 14px 18px;
+      margin: 18px 0 24px 0;
+      font-weight: bold;
+      font-size: 1.08em;
+      box-shadow: 0 4px 18px #dfbb7722;
+      border: 2px solid #dfbb77;
+      max-width: 480px;
+      width: 95%;
+      text-align: left;
+      position: relative;
+      animation: fadeInUp 0.7s;
+    }
+
+    .cuadro-dorado svg,
+    .cuadro-info svg {
+      position: absolute;
+      left: 12px;
+      top: 14px;
+      width: 22px;
+      height: 22px;
+      opacity: 0.8;
+    }
+
+    /* --- Mejorar imágenes de foros y QR --- */
+    .foro-img,
+    .qr-img {
+      border-radius: 18px;
+      box-shadow: 0 4px 18px #004aab33;
+      border: 2.5px solid #dfbb77;
+      margin: 0 auto 18px auto;
+      display: block;
+      max-width: 320px;
+      width: 90vw;
+      transition: transform 0.2s, box-shadow 0.2s;
+      background: #fffbe9;
+    }
+
+    .foro-img:hover,
+    .qr-img:hover {
+      transform: scale(1.03) rotate(-1deg);
+      box-shadow: 0 8px 32px #004aab44;
+    }
+
+    /* --- Botones de redes sociales mejorados --- */
+    .redes-sociales-botones {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 13%;
+      margin-right: 0;
+      margin-top: 0;
+      gap: 14px;
+      animation: fadeInUp 0.7s 0.2s both;
+    }
+
+    .boton-instagram,
+    .boton-tiktok {
+      border-radius: 12px;
+      padding: 18px 24px;
+      font-size: 1.13em;
+      box-shadow: 0 4px 18px #dfbb7722;
+      border: 2px solid #fff6e0;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .boton-instagram:hover,
+    .boton-tiktok:hover {
+      transform: scale(1.06) rotate(-1deg);
+      box-shadow: 0 8px 32px #004aab44;
+      filter: brightness(1.08);
+    }
+
+    /* --- Animación de entrada --- */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(32px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* --- Mejorar títulos de secciones con iconos --- */
+    .separador-ancho {
+      position: relative;
+      padding-left: 44px !important;
+      background: linear-gradient(90deg, #003366 0%, #004aab 100%);
+      border-radius: 12px;
+      border: 2px solid #003366ee;
+      box-shadow: 0 2px 8px #dfbb7740;
+      color: #dfbb77;
+      font-size: 1.13em;
+      font-weight: bold;
+      margin: 32px 0 18px 0;
+      min-width: 180px;
+      max-width: 480px;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      animation: fadeInUp 0.7s;
+    }
+
+    .separador-ancho svg {
+      position: absolute;
+      left: 12px;
+      top: 7px;
+      width: 24px;
+      height: 24px;
+      opacity: 0.85;
+    }
+
+    .separador-ancho span {
+      color: #dfbb77;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      font-size: 1.08em;
+    }
+
+    /* --- Ajustes responsivos --- */
+    @media (max-width: 600px) {
+
+      .cuadro-dorado,
+      .cuadro-info {
+        padding: 10px 8px;
+        font-size: 0.98em;
+        border-radius: 9px;
+        max-width: 98vw;
+      }
+
+      .foro-img,
+      .qr-img {
+        max-width: 96vw;
+        border-radius: 12px;
+      }
+
+      .separador-ancho {
+        min-width: 0;
+        max-width: 99vw;
+        border-radius: 8px;
+        padding-left: 38px !important;
+        font-size: 1em;
+      }
+
+      .separador-ancho svg {
+        left: 7px;
+        top: 7px;
+        width: 20px;
+        height: 20px;
+      }
+
+      .redes-sociales-botones {
+        margin-left: 3%;
+        gap: 8px;
+      }
+    }
+
+    /* --- Ajustes móviles globales para todo el sitio (secretariado.html e index.html) --- */
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.98em;
+        padding: 0;
+        margin: 0;
+      }
+
+      main,
+      section,
+      .cuadro-dorado,
+      .cuadro-info {
+        max-width: 99vw !important;
+        width: 99vw !important;
+        padding-left: 2vw !important;
+        padding-right: 2vw !important;
+        box-sizing: border-box;
+      }
+
+      .card-persona {
+        padding: 14px 4vw 10px 4vw !important;
+        font-size: 0.99em !important;
+        max-width: 99vw !important;
+        width: 99vw !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        border-radius: 10px !important;
+      }
+
+      .card-persona h4,
+      .card-persona h5 {
+        font-size: 1.08em !important;
+        padding: 6px 8px !important;
+        border-radius: 7px !important;
+        margin-top: 0 !important;
+        margin-bottom: 0.3em !important;
+        background: linear-gradient(90deg, #ffe9b3 60%, #fff6e0 100%) !important;
+        border: 1.5px solid #dfbb77 !important;
+        box-shadow: 0 2px 10px #dfbb7722 !important;
+        display: inline-block !important;
+        line-height: 1.3 !important;
+        color: #004aab !important;
+      }
+
+      .card-persona p {
+        padding: 9px 6px !important;
+        font-size: 0.99em !important;
+        border-radius: 9px !important;
+        margin-bottom: 0.7em !important;
+        border-left: 3px solid #004aab !important;
+        background: linear-gradient(90deg, #fffbe9 60%, #ffe9b3 100%) !important;
+        color: #004aab !important;
+      }
+
+      .card-persona img,
+      .foro-img,
+      .qr-img,
+      .persona-img {
+        width: 96vw !important;
+        max-width: 180px !important;
+        height: auto !important;
+        border-radius: 12px !important;
+        margin: 0.5em auto 0.7em auto !important;
+        display: block !important;
+      }
+
+      .menu-desplegable {
+        top: 6px !important;
+        right: 6px !important;
+      }
+
+      .menu-boton {
+        padding: 6px 10px !important;
+        font-size: 0.95em !important;
+      }
+
+      .menu-contenido {
+        min-width: 120px !important;
+        padding: 7px 4px 7px 4px !important;
+        border-radius: 10px !important;
+      }
+
+      .menu-title {
+        font-size: 0.95em !important;
+        padding: 6px 6px !important;
+        border-radius: 5px !important;
+      }
+
+      .separador-ancho {
+        min-width: 0 !important;
+        max-width: 99vw !important;
+        border-radius: 8px !important;
+        padding-left: 10px !important;
+        font-size: 1em !important;
+      }
+
+      .foros-titulo {
+        font-size: 1.08em !important;
+        padding: 12px 0 12px 0 !important;
+        border-radius: 9px !important;
+        margin-bottom: 22px !important;
+      }
+
+      .cuadro-dorado#redes {
+        margin-left: 1vw !important;
+        width: 98vw !important;
+        max-width: 98vw !important;
+        padding: 10px 8px !important;
+      }
+
+      .redes-sociales-botones {
+        margin-left: 1vw !important;
+        margin-right: 0 !important;
+        gap: 7px !important;
+      }
+
+      footer {
+        font-size: 0.98em !important;
+        padding: 10px 0 7px 0 !important;
+      }
     }
 
     .seccion1 {
@@ -44,152 +348,13 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    h9 {
       color: #003366;
     }
 
     h6.custom-heading {
       color: #dfbb77;
-    }
-
-    .separador-rect {
-      width: 80vw;
-      min-width: 100px;
-      max-width: 100px;
-      height: 28px;
-      margin: 30px auto 18px auto;
-      border-radius: 8px;
-      background: #004aab;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .separador-rect span {
-      color: #dfbb77;
-      font-size: 1em;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .contenido-principal {
-      margin: 40px;
-      padding-left: 24px;
-    }
-
-    h2,
-    h3 {
-      background: #dfbb77;
-      color: #003366;
-      border-radius: 10px;
-      padding: 10px 18px 8px 18px;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 0 2px 8px #dfbb7740;
-      margin-bottom: 12px;
-      font-size: 1.35em;
-      text-align: left;
-      margin-left: 0;
-    }
-
-    @media (max-width: 600px) {
-      .contenido-principal {
-        margin: 4px;
-        padding-left: 2px;
-      }
-
-      .cuadro-dorado {
-        width: 98%;
-        max-width: 98vw;
-        padding: 10px 8px;
-        font-size: 0.98em;
-      }
-
-      .cuadro-dorado#redes {
-        margin-left: 1%;
-        width: 98%;
-        max-width: 98vw;
-        padding: 10px 8px;
-      }
-
-      .separador-ancho,
-      .separador-rect {
-        width: 98vw;
-        min-width: 0;
-        max-width: 99vw;
-        height: 32px;
-        margin: 18px auto 10px auto;
-        border-radius: 6px;
-        padding-left: 10px;
-      }
-
-      .separador-ancho span,
-      .separador-rect span {
-        font-size: 1em;
-      }
-
-      .boton-formulario,
-      .boton-instagram,
-      .boton-tiktok {
-        font-size: 0.98em;
-        padding: 12px 10px;
-        border-radius: 6px;
-        margin-top: 10px;
-      }
-
-      .boton-instagram img,
-      .boton-tiktok img {
-        width: 22px;
-        height: 22px;
-        margin-right: 7px;
-      }
-
-      .redes-sociales-botones {
-        margin-left: 1%;
-        margin-right: 0;
-        gap: 7px;
-      }
-
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-size: 1em;
-      }
-
-      .menu-desplegable {
-        top: 4px;
-        right: 4px;
-      }
-
-      .menu-boton {
-        padding: 4px 7px;
-        font-size: 0.92em;
-      }
-
-      .menu-contenido {
-        min-width: 90px;
-        padding: 4px 2px 4px 2px;
-        border-radius: 7px;
-      }
-
-      .menu-title {
-        font-size: 0.92em;
-        padding: 4px 4px;
-        border-radius: 4px;
-      }
-    }
-
-    .seccion1 {
-      height: 175px;
-      padding: 10px;
-    }
-
-    img.logo {
-      width: 90vw;
-      max-width: 250px;
-      height: auto;
     }
 
     .separador-rect {
@@ -209,7 +374,8 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    h9 {
       font-size: 1.1em;
     }
 
@@ -221,7 +387,7 @@
       display: inline-block;
       padding: 12px 28px;
       background-color: var(--primary-yellow);
-      color: #4e54c8;
+      color: #003366;
       font-size: 1.1em;
       font-weight: bold;
       border: none;
@@ -234,7 +400,7 @@
 
     .boton-formulario:hover {
       transform: scale(1.04);
-      color: #4e54c8;
+      color: #003366;
     }
 
     .separador-ancho {
@@ -587,23 +753,109 @@
         padding-left: 2px;
       }
     }
+
+    /* --- Fondo individual para h3 dentro de cuadros dorados --- */
+    .cuadro-dorado h9 {
+      background: linear-gradient(90deg, #e0e7ff 0%, #b6c6f5 100%);
+      /* azul claro suave */
+      color: #23305a;
+      border-radius: 10px;
+      padding: 12px 0 12px 0;
+      margin-bottom: 18px;
+      margin-top: 0;
+      font-size: 1.18em;
+      font-weight: bold;
+      box-shadow: 0 2px 8px #b6c6f540;
+      letter-spacing: 1.2px;
+      display: block;
+    }
+
+    /* --- Fondo individual y diseño para foros-titulo (FOROS Y TEMÁTICAS) --- */
+    .foros-titulo {
+      display: block;
+      background-color: #23305a;
+      color: #dfbb77;
+      border-radius: 14px;
+      padding: 18px 0 18px 0;
+      margin-bottom: 36px;
+      margin-top: 0;
+      font-size: 1.35em;
+      font-weight: bold;
+      box-shadow: 0 4px 18px #b6c6f540;
+      letter-spacing: 1.5px;
+      text-align: center;
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2.5px solid #b6c6f5;
+      z-index: 2;
+      position: relative;
+    }
+
+    @media (max-width: 600px) {
+      .foros-titulo {
+        font-size: 1.08em;
+        padding: 12px 0 12px 0;
+        border-radius: 9px;
+        margin-bottom: 22px;
+      }
+    }
+
+    /* --- Ajuste para anclajes con menú fijo en móviles --- */
+    .anchor-offset {
+      display: block;
+      position: relative;
+      top: -80px;
+      height: 1px;
+      width: 1px;
+    }
+
+    @media (max-width: 600px) {
+      .anchor-offset {
+        top: -60px;
+      }
+    }
+
+    /* --- Ajuste de padding en cuadros dorados y foros para móviles --- */
+    @media (max-width: 600px) {
+
+      .cuadro-dorado,
+      .cuadro-info {
+        padding: 10px 4vw;
+        font-size: 0.98em;
+        border-radius: 9px;
+        max-width: 99vw;
+      }
+
+      .foro-img,
+      .qr-img {
+        max-width: 98vw;
+        border-radius: 12px;
+      }
+
+      .foros-tematicas-centrado {
+        padding-left: 2vw;
+        padding-right: 2vw;
+      }
+    }
   </style>
   <script src="animaciones.js"></script>
 </head>
 
 <body>
 
-  <div class="seccion1">
+  <div class="seccion1" id="inicio">
     <div class="menu-desplegable">
       <button class="menu-boton" id="menu-boton" onclick="toggleMenu()">...</button>
       <div class="menu-contenido" id="menu-contenido">
-        <a href="#inicio" class="menu-link" onclick="cerrarMenu()">
+        <a href="#inicio" class="menu-link" onclick="cerrarMenu(); scrollToSection('inicio'); return false;">
           <h1 class="menu-title">Inicio</h1>
         </a>
-        <a href="#inscripcion" class="menu-link" onclick="cerrarMenu()">
+        <a href="#inscripcion" class="menu-link" onclick="cerrarMenu(); scrollToSection('inscripcion'); return false;">
           <h3 class="menu-title">Inscripción</h3>
         </a>
-        <a href="#foros" class="menu-link" onclick="cerrarMenu()">
+        <a href="#foros" class="menu-link" onclick="cerrarMenu(); scrollToSection('foros'); return false;">
           <h4 class="menu-title">Foros</h4>
         </a>
         <a href="secretariado.html" class="menu-link" onclick="cerrarMenu()">
@@ -644,162 +896,233 @@
           }
         }
       });
+      // Asegura que el menú se oculte al cambiar el tamaño de la ventana
+      window.addEventListener('resize', function () {
+        var menu = document.getElementById('menu-contenido');
+        if (window.innerWidth > 600) {
+          menu.style.display = '';
+        } else {
+          menu.style.display = 'none';
+        }
+      });
+      // Corrige el cierre del menú al hacer scroll
+      window.addEventListener('scroll', function () {
+        var menu = document.getElementById('menu-contenido');
+        if (window.innerWidth <= 600 && menu) {
+          menu.style.display = 'none';
+        }
+      });
+      // Scroll suave a secciones
+      function scrollToSection(id) {
+        var el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     </script>
   </div>
-  
-     <div class="contenido-principal">
-    <div class="inicio">
 
-    <h2>Estimados Delegados:</h2>
+  <!-- Saludo en cuadro dorado centrado, sin fondo azul -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
+    <div class="saludo-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #b6c6f5 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
+      <h2 class="saludo-titulo"
+        style="margin:0; color:#fff; font-size:1.22em; letter-spacing:1.1px; font-weight:bold; text-align:left;">
+        Estimados Delegados:</h2>
     </div>
-    <p>
-      Nos complace invitarles a participar en el BOLMUN CHRISTA, que se llevará a cabo el 26, 27 y 28 de junio.
-      Este evento es una oportunidad única para que los estudiantes se conviertan en delegados y aborden temas de gran
-      relevancia a nivel mundial,
-      simulando el funcionamiento de la Organización de las Naciones Unidas.
+    <p style="margin-bottom:0;">
+      Nos complace invitarles a participar en el BOLMUN CHRISTA, que se llevará a cabo el 26, 27 y 28 de junio. Este
+      evento es una oportunidad única para que los estudiantes se conviertan en delegados y aborden temas de gran
+      relevancia a nivel mundial, simulando el funcionamiento de la Organización de las Naciones Unidas.
     </p>
+  </div>
 
-    <h3>¿QUÉ SON LOS MODELOS ONU?</h3>
-    <p>
-      Una simulación del Sistema de Naciones Unidas donde estudiantes representan a los delegados de los Estados
-      Miembros y debaten temas reales de la agenda internacional.
-    </p>
-    <p>
-      El Modelo de la ONU es una manera práctica para aprender sobre su funcionamiento. Las conferencias, organizadas
-      por instituciones educativas, ayudan a desarrollar habilidades de oratoria, investigación y escritura.
-    </p>
-    <p>
-      Los debates se dan en comités que simulan órganos reales de la ONU, abordando temas como paz, seguridad, derechos
-      humanos, medioambiente, género y justicia internacional.
-    </p>
+  <!-- ¿Qué son los modelos ONU? -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
+    <div class="onu-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #6e8adf 100%); box-shadow: 0 2px 8px #23305a33; text-align:left; padding-left:32px;">
+      <h3 class="onu-titulo"
+        style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold; text-align:left;">¿QUÉ
+        SON LOS MODELOS ONU?</h3>
+    </div>
+    <p>Es una simulación del Sistema de Naciones Unidas donde estudiantes representan a los delegados de los Estados
+      Miembros y debaten temas reales de la agenda internacional.</p>
+    <p>El Modelo de la ONU es una manera práctica para aprender sobre su funcionamiento. Las conferencias, organizadas
+      por instituciones educativas, ayudan a desarrollar habilidades de oratoria, investigación y escritura.</p>
+    <p>Los debates se dan en comités que simulan órganos reales de la ONU, abordando temas como paz, seguridad,
+      derechos humanos, medioambiente, género y justicia internacional.</p>
+  </div>
 
-    <h3 id="inscripcion">PARTICIPANTES</h3>
-    <p>
-      Pueden participar estudiantes del nivel secundario y universitario hasta el tercer semestre.
-      Inscripciones en el siguiente enlace o escaneando el código QR:
-    </p>
+  <!-- Anchor para INSCRIPCION -->
+  <span id="inscripcion" class="anchor-offset"></span>
+  <!-- Participantes -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
+    <div class="participantes-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #a1c4fd 100%); box-shadow: 0 2px 8px #23305a33; text-align:center;">
+      <h3 class="participantes-titulo"
+        style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold; text-align:center;">
+        PARTICIPANTES</h3>
+    </div>
+    <p>Pueden participar estudiantes del nivel secundario y universitario hasta el tercer semestre. Inscripciones en
+      el siguiente enlace o escaneando el código QR:</p>
     <div class="centrado">
-      <img src="img/Qr.jpeg" alt="Qr Formulario" class="logo">
+      <img src="img/Qr.jpeg" alt="Qr Formulario" class="qr-img">
       <br>
-      <a href="https://forms.gle/AymvhALA5L55XWJf6" target="_blank" class="boton-formulario">Formulario de
+      <a href="#inscripcion" class="boton-formulario"
+        onclick="document.getElementById('inscripcion').scrollIntoView({behavior: 'smooth'}); return false;">Formulario
+        de
         Inscripción</a>
     </div>
-    <h3><strong>Inversión: Bs 200</strong></h3>
-    <p>Incluye:</p>
-    <li>Alimentación (desayuno, almuerzo y merienda)</li>
-    <li>Certificado de participación</li>
-    <li>Certificado y trofeo para ganadores</li>
-    <li>Material de escritorio</li>
-    <li>Gafetes de identificación</li>
-    <li>Capacitaciones para el debate</li>
+  </div>
 
-    <div class="separador-rect centrado">
-      <span>FOROS Y TEMÁTICAS</span>
+  <!-- Inversión -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
+    <div class="inversion-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); box-shadow: 0 2px 8px #23305a33; text-align:center;">
+      <h3 class="inversion-titulo"
+        style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold; text-align:center;">
+        Inversión</h3>
     </div>
+    <p>Para poder ser participe de este modelos de las Naciones Unidas, es necesario pagar el monto de la Inscripción
+      que es de 200bs</p>
+    <p>El monto de la inscripción incluye:</p>
+    <ul style="margin:0; padding-left:18px; text-align:left; display:inline-block;">
+      <li>Alimentación (desayuno, almuerzo y merienda)</li>
+      <li>Certificado de participación</li>
+      <li>Certificado y trofeo para ganadores</li>
+      <li>Material de escritorio</li>
+      <li>Gafetes de identificación</li>
+      <li>Capacitaciones para el debate</li>
+    </ul>
+  </div>
 
-    <div id="foros" class="foros-tematicas-centrado">
-      <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
-      <img src="img/foro 1.jpg" alt="FORO 1" class="logo">
-      <ol>
-        <li><strong>Problemáticas en el suministro de combustibles y su impacto social</strong></li>
-        <li><strong>Disponibilidad de divisas internacionales y su influencia en la economía</strong></li>
-      </ol>
-
-      <h4><strong>FORO 2: Migración Forzada y Política Internacional</strong></h4>
-      <img src="img/foro 2.jpg" alt="FORO 2" class="logo">
-      <ol>
-        <li><strong>Impacto del nuevo mandato presidencial en EE. UU. en políticas migratorias</strong></li>
-        <li><strong>Causas y consecuencias de los desplazamientos forzados</strong></li>
-      </ol>
-
-      <h4><strong>FORO 3: Ciberseguridad y Sociedad Digital</strong></h4>
-      <img src="img/foro 3.jpg" alt="FORO 3" class="logo">
-      <ol>
-        <li><strong>Ciberacoso: causas, consecuencias y prevención</strong></li>
-        <li><strong>Protección de datos y rol del sector empresarial</strong></li>
-      </ol>
-
-      <h4><strong>FORO 4: Igualdad de Género y Derechos Humanos (ONU Mujeres)</strong></h4>
-      <img src="img/foro 4.jpg" alt="FORO 4" class="logo">
-      <ol>
-        <li><strong>Acceso a la interrupción voluntaria del embarazo</strong></li>
-        <li><strong>Violencia de género extrema: causas y estrategias de erradicación</strong></li>
-      </ol>
-
-      <h4><strong>FORO 5: Medioambiente y Sostenibilidad (PNUMA)</strong></h4>
-      <img src="img/foro 5.jpeg" alt="FORO 5" class="logo">
-      <ol>
-        <li><strong>Deforestación y su impacto en ecosistemas</strong></li>
-        <li><strong>Contaminación plástica y alternativas sostenibles</strong></li>
-      </ol>
-
-      <h4><strong>FORO 6: Educación Rural y Equidad (foro departamental)</strong></h4>
-      <img src="img/foro 6.jpeg" alt="FORO6" class="logo">
-      <ol>
-        <li><strong>Brecha digital en zonas rurales del Beni</strong></li>
-        <li><strong>Presupuesto y calidad educativa en áreas alejadas</strong></li>
-      </ol>
-
-      <h4><strong>FORO 7: Salud Sexual y Reproductiva</strong></h4>
-      <img src="img/foro 7.jpg" alt="FORO 7" class="logo">
-      <ol>
-        <li><strong>Prevención de ETS y acceso a anticonceptivos</strong></li>
-        <li><strong>Diagnóstico de ETS en comunidades LGBTQ+ migrantes</strong></li>
-      </ol>
-
-      <h4><strong>FORO 8: Conflictos Sociopolíticos y Seguridad Global</strong></h4>
-      <img src="img/foro 8.jpeg" alt="FORO 8" class="logo">
-      <ol>
-        <li><strong>Grupos extremistas y estabilidad internacional</strong></li>
-        <li><strong>Regiones con tensión prolongada</strong></li>
-      </ol>
-
-      <h4><strong>FORO 9: Perspectivas de la Economía Global</strong></h4>
-      <img src="img/foro 9.jpeg" alt="FORO 9" class="logo">
-      <ol>
-        <li><strong>Retos económicos en países en desarrollo</strong></li>
-        <li><strong>Criptomonedas en economías emergentes</strong></li>
-      </ol>
-      <h4><strong>FORO 10: Infancia, Derechos y Medioambiente (UNICEF)</strong></h4>
-      <img src="img/foro 10.jpeg" alt="FORO 10" class="logo">
-      <ol>
-        <li><strong>Contaminación por incendios forestales y salud infantil</strong></li>
-        <li><strong>Discriminación por orientación sexual en la niñez</strong></li>
-      </ol>
+  <!-- Foros y Temáticas en cuadros dorados separados -->
+  <div
+    style="background:rgba(255, 230, 160, 0.45); box-shadow:0 8px 32px #dfbb7740, 0 2px 8px #dfbb7740; border-radius:22px; padding:32px 0 32px 0; margin:0 auto 48px auto; max-width:820px;">
+    <div style="max-width:760px; margin: 0 auto; text-align:center;">
+      <div class="foros-titulo">FOROS Y TEMÁTICAS</div>
     </div>
-
-    <div class="separador-ancho" style="width:auto; min-width:180px; max-width:460px; display:inline-block; margin:0 0 10px 0; padding-left:10px;">
-      <span>Información Adicional</span>
+      <div id="foros" class="foros-tematicas-centrado" style="margin:0 auto; max-width:100%;">
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
+          <img src="img/foro 1.jpg" alt="FORO 1" class="foro-img">
+          <ol>
+            <li><strong>Problemáticas en el suministro de combustibles y su impacto social</strong></li>
+            <li><strong>Disponibilidad de divisas internacionales y su influencia en la economía</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 2: Migración Forzada y Política Internacional</strong></h4>
+          <img src="img/foro 2.jpg" alt="FORO 2" class="foro-img">
+          <ol>
+            <li><strong>Impacto del nuevo mandato presidencial en EE. UU. en políticas migratorias</strong></li>
+            <li><strong>Causas y consecuencias de los desplazamientos forzados</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 3: Ciberseguridad y Sociedad Digital</strong></h4>
+          <img src="img/foro 3.jpg" alt="FORO 3" class="foro-img">
+          <ol>
+            <li><strong>Ciberacoso: causas, consecuencias y prevención</strong></li>
+            <li><strong>Protección de datos y rol del sector empresarial</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 4: Igualdad de Género y Derechos Humanos (ONU Mujeres)</strong></h4>
+          <img src="img/foro 4.jpg" alt="FORO 4" class="foro-img">
+          <ol>
+            <li><strong>Acceso a la interrupción voluntaria del embarazo</strong></li>
+            <li><strong>Violencia de género extrema: causas y estrategias de erradicación</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 5: Medioambiente y Sostenibilidad (PNUMA)</strong></h4>
+          <img src="img/foro 5.jpeg" alt="FORO 5" class="foro-img">
+          <ol>
+            <li><strong>Deforestación y su impacto en ecosistemas</strong></li>
+            <li><strong>Contaminación plástica y alternativas sostenibles</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 6: Educación Rural y Equidad (foro departamental)</strong></h4>
+          <img src="img/foro 6.jpeg" alt="FORO6" class="foro-img">
+          <ol>
+            <li><strong>Brecha digital en zonas rurales del Beni</strong></li>
+            <li><strong>Presupuesto y calidad educativa en áreas alejadas</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 7: Salud Sexual y Reproductiva</strong></h4>
+          <img src="img/foro 7.jpg" alt="FORO 7" class="foro-img">
+          <ol>
+            <li><strong>Prevención de ETS y acceso a anticonceptivos</strong></li>
+            <li><strong>Diagnóstico de ETS en comunidades LGBTQ+ migrantes</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 8: Conflictos Sociopolíticos y Seguridad Global</strong></h4>
+          <img src="img/foro 8.jpeg" alt="FORO 8" class="foro-img">
+          <ol>
+            <li><strong>Grupos extremistas y estabilidad internacional</strong></li>
+            <li><strong>Regiones con tensión prolongada</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+          <h4><strong>FORO 9: Perspectivas de la Economía Global</strong></h4>
+          <img src="img/foro 9.jpeg" alt="FORO 9" class="foro-img">
+          <ol>
+            <li><strong>Retos económicos en países en desarrollo</strong></li>
+            <li><strong>Criptomonedas en economías emergentes</strong></li>
+          </ol>
+        </div>
+        <div class="cuadro-dorado" style="margin:0 auto; text-align:center; float:none;">
+          <h4><strong>FORO 10: Infancia, Derechos y Medioambiente (UNICEF)</strong></h4>
+          <img src="img/foro 10.jpeg" alt="FORO 10" class="foro-img">
+          <ol>
+            <li><strong>Contaminación por incendios forestales y salud infantil</strong></li>
+            <li><strong>Discriminación por orientación sexual en la niñez</strong></li>
+          </ol>
+        </div>
+      </div>
     </div>
-    <div
-      style="background:#dfbb77; color:#003366; border-radius:10px; padding:12px 10px 10px 10px; margin:14px 0 20px 0; font-weight:bold; font-size:1.03em; box-shadow:0 2px 8px #dfbb7740; max-width:420px; width:95%; text-align:left;">
-      <ul style="margin:0; padding-left:18px;">
-        <li><strong>Todos los participantes recibirán capacitaciones previas al debate.</strong></li>
-        <li><strong>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</strong></li>
-        <li><strong>Los participantes deben comprometerse a seguir el protocolo oficial del evento.</strong></li>
-      </ul>
-    </div>
+  </div>
 
-    <div style="height:10px;"></div>
-
-    <div class="separador-ancho" style="width:auto; min-width:160px; max-width:420px; display:inline-block; margin:0 0 10px 0; padding-left:10px;">
-      <span>Contactos</span>
+  <!-- Separador decorativo -->
+  <!-- Información Adicional -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 32px auto; text-align:center;">
+    <div class="info-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #5e81c8 100%); box-shadow: 0 2px 8px #23305a33;">
+      <h3 class="info-titulo" style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold;">
+        Información Adicional</h3>
     </div>
-     <div style="height:10px;"></div>
-    <div
-      style="background:#dfbb77; color:#003366; border-radius:10px; padding:8px 10px 8px 10px; margin:10px 0 16px 0; font-weight:bold; font-size:1.03em; box-shadow:0 2px 8px #dfbb7740; display:inline-block; min-width:220px; max-width:420px; width:auto; text-align:left;">
-      <p style="margin:0 0 7px 0;"><strong>Mateo Fuentes – 68962854- Secretario General</strong></p>
-      <p style="margin:0;"><strong>Christiany Oliveira – 68985548- Subsecretaria General</strong></p>
+    <ul style="margin:0 auto; padding-left:18px; text-align:left; display:inline-block;">
+      <li><strong>Todos los participantes recibirán capacitaciones previas al debate.</strong></li>
+      <li><strong>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</strong></li>
+      <li><strong>Los participantes deben comprometerse a seguir el protocolo oficial del evento.</strong></li>
+    </ul>
+  </div>
+  <div style="height:36px;"></div>
+  <!-- Contactos -->
+  <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 32px auto; text-align:center;">
+    <div class="contactos-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #7bbfae 100%); box-shadow: 0 2px 8px #23305a33;">
+      <h3 class="contactos-titulo"
+        style="margin:0; color:#fff; font-size:1.18em; letter-spacing:1.1px; font-weight:bold;">Contactos</h3>
     </div>
-
-    <div style="height:10px;"></div>
-
-    <div class="separador-ancho" id="redes" style="width:auto; min-width:160px; max-width:420px; display:inline-block; margin:0 0 10px 0; padding-left:10px;">
-      <span>Redes Sociales</span>
+    <p style="margin:0 0 14px 0;"><strong>Mateo Fuentes – 68962854 – Secretario General</strong></p>
+    <p style="margin:0;"><strong>Christiany Oliveira – 68985548 – Subsecretaria General</strong></p>
+  </div>
+  <div style="height:36px;"></div>
+  <!-- Redes Sociales -->
+  <div class="cuadro-dorado" id="redes" style="max-width:700px; margin: 0 auto 32px auto; text-align:center;">
+    <div class="redes-titulo-fondo"
+      style="margin: -18px -18px 18px -18px; border-radius: 14px 14px 0 0; padding: 18px 0; background: linear-gradient(90deg, #23305a 0%, #4e54c8 100%); box-shadow: 0 2px 8px #23305a33;">
+      <h3 class="redes-titulo" style="margin:0; color:#fff; font-size:1.25em; letter-spacing:1.2px; font-weight:bold;">
+        Redes Sociales</h3>
     </div>
-    <p><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca del BOLMUN CHRISTA
-        2025:</strong></p>
-    <div class="redes-sociales-botones">
+    <p style="margin-bottom:18px;"><strong>Síguenos en nuestras redes para estar al pendiente de las novedades acerca
+        del BOLMUN CHRISTA 2025:</strong></p>
+    <div class="redes-sociales-botones" style="align-items:center; margin-left:0; gap:18px;">
       <a href="https://www.instagram.com/bolmun_christa/" target="_blank" class="boton-instagram">
         <img src="img/Instagram.jpeg" alt="Instagram Logo">
         BOLMUN CHRISTA 2025
@@ -811,6 +1134,7 @@
       </a>
     </div>
   </div>
+  <div style="height:36px;"></div>
   <footer>
     <p>&copy; 2025 BOLMUN CHRISTA.</p>
   </footer>

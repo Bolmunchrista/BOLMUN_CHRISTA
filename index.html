@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,6 +117,7 @@
                 opacity: 0;
                 transform: translateY(32px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -162,6 +164,7 @@
 
         /* --- Ajustes responsivos --- */
         @media (max-width: 600px) {
+
             .cuadro-dorado,
             .cuadro-info {
                 padding: 10px 8px;
@@ -516,7 +519,8 @@
                 gap: 7px;
             }
         }
-                /* Ajuste para que el cuadro dorado y su contenido no se desborden */
+
+        /* Ajuste para que el cuadro dorado y su contenido no se desborden */
         .cuadro-dorado {
             box-sizing: border-box;
             width: 100%;
@@ -524,7 +528,7 @@
             overflow: hidden;
             word-break: break-word;
         }
-        
+
         /* Ajuste para imágenes de foros dentro del cuadro dorado */
         .cuadro-dorado .foro-img {
             display: block;
@@ -636,6 +640,7 @@
                 opacity: 0;
                 transform: translateY(-16px) scale(0.98);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0) scale(1);
@@ -886,6 +891,7 @@
 
         /* --- Ajuste de padding en cuadros dorados y foros para móviles --- */
         @media (max-width: 600px) {
+
             .cuadro-dorado,
             .cuadro-info {
                 padding: 10px 4vw;
@@ -925,6 +931,7 @@
         }
 
         @media (max-width: 600px) {
+
             .saludo-titulo-fondo,
             .onu-titulo-fondo,
             .participantes-titulo-fondo,
@@ -937,46 +944,94 @@
                 padding-right: 0 !important;
             }
         }
-                /* Animación fadeInUp */
+
+        /* Centrar imágenes y evitar corte de texto en los foros */
+        .cuadro-dorado {
+            text-align: center;
+            word-break: normal;
+            overflow-wrap: break-word;
+            white-space: normal;
+        }
+
+        .cuadro-dorado .foro-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
+            width: 95%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px #004aab33;
+            border: 2.5px solid #dfbb77;
+            background: #fffbe9;
+            object-fit: cover;
+        }
+
+        .cuadro-dorado h4,
+        .cuadro-dorado strong,
+        .cuadro-dorado li {
+            white-space: normal !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            text-align: left;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 95%;
+        }
+
+        .cuadro-dorado ol {
+            display: block;
+            margin: 0 auto 0 auto;
+            padding-left: 1.2em;
+            text-align: left;
+            max-width: 95%;
+        }
+
+        /* Animación fadeInUp */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
                 transform: translateY(32px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .fadeInUp {
             animation: fadeInUp 0.7s both;
             opacity: 1 !important;
         }
-       
 
+        
+        
     </style>
 </head>
+
 <body>
 
-        <script>
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top < window.innerHeight &&
-            rect.bottom > 0
-        );
-    }
-    
-    function animateOnScroll() {
-        document.querySelectorAll('.cuadro-dorado, .redes-sociales-botones').forEach(function(el) {
-            if (isInViewport(el)) {
-                el.classList.add('fadeInUp');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('DOMContentLoaded', animateOnScroll);
+    <script>
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return (
+                rect.top < window.innerHeight &&
+                rect.bottom > 0
+            );
+        }
+
+        function animateOnScroll() {
+            document.querySelectorAll('.cuadro-dorado, .redes-sociales-botones').forEach(function (el) {
+                if (isInViewport(el)) {
+                    el.classList.add('fadeInUp');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('DOMContentLoaded', animateOnScroll);
     </script>
 
     <div class="seccion1" id="inicio">
@@ -1142,7 +1197,7 @@
             <div class="foros-titulo">FOROS Y TEMÁTICAS</div>
         </div>
         <div id="foros" class="foros-tematicas-centrado" style="margin:0 auto; max-width:100%;">
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
                 <img src="img/foro 1.jpg" alt="FORO 1" class="foro-img">
                 <ol>
@@ -1154,7 +1209,7 @@
                 </ol>
             </div>
 
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 2: Migración Forzada y Política Internacional</strong></h4>
                 <img src="img/foro 2.jpg" alt="FORO 2" class="foro-img">
                 <ol>
@@ -1166,7 +1221,7 @@
                 </ol>
             </div>
 
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 3: Ciberseguridad y Sociedad Digital</strong></h4>
                 <img src="img/foro 3.jpg" alt="FORO 3" class="foro-img">
                 <ol>
@@ -1179,7 +1234,7 @@
                 </ol>
             </div>
 
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 4: Igualdad de Género y Derechos Humanos (ONU Mujeres)</strong></h4>
                 <img src="img/foro 4.jpg" alt="FORO 4" class="foro-img">
                 <ol>
@@ -1192,7 +1247,7 @@
                 </ol>
             </div>
 
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 5: Medioambiente y Sostenibilidad (PNUMA)</strong></h4>
                 <img src="img/foro 5.jpeg" alt="FORO 5" class="foro-img">
                 <ol>
@@ -1203,64 +1258,74 @@
                 </ol>
             </div>
 
-                     <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 6: Desafíos y Oportunidades de la Educación en Tiempos de Crisis</strong></h4>
                 <img src="img/foro 6.jpeg" alt="FORO 6" class="foro-img">
                 <ol>
                     <li><strong>Tópico A:</strong> El impacto de la pandemia en la educación: retos y soluciones</li>
-                    <li><strong>Tópico B:</strong> La brecha digital y su efecto en el acceso a la educación de calidad</li>
+                    <li><strong>Tópico B:</strong> La brecha digital y su efecto en el acceso a la educación de calidad
+                    </li>
                 </ol>
             </div>
-            
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 7: Salud Sexual y Reproductiva en Poblaciones Vulnerables</strong></h4>
                 <img src="img/foro 7.jpg" alt="FORO 7" class="foro-img">
                 <ol>
-                    <li><strong>Tópico A:</strong> Estrategias de prevención de enfermedades de transmisión sexual y acceso a métodos anticonceptivos</li>
-                    <li><strong>Tópico B:</strong> Retos en el diagnóstico oportuno de ETS en comunidades LGBTQ+ migrantes</li>
+                    <li><strong>Tópico A:</strong> Estrategias de prevención de enfermedades de transmisión sexual y
+                        acceso a métodos anticonceptivos</li>
+                    <li><strong>Tópico B:</strong> Retos en el diagnóstico oportuno de ETS en comunidades LGBTQ+
+                        migrantes</li>
                 </ol>
             </div>
-            
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 8: Conflictos Sociopolíticos y Seguridad Global</strong></h4>
                 <img src="img/foro 8.jpeg" alt="FORO 8" class="foro-img">
                 <ol>
-                    <li><strong>Tópico A:</strong> Análisis de grupos extremistas y su impacto en la estabilidad internacional</li>
-                    <li><strong>Tópico B:</strong> Situaciones de tensión prolongada en regiones con alta conflictividad sociopolítica</li>
+                    <li><strong>Tópico A:</strong> Análisis de grupos extremistas y su impacto en la estabilidad
+                        internacional</li>
+                    <li><strong>Tópico B:</strong> Situaciones de tensión prolongada en regiones con alta conflictividad
+                        sociopolítica</li>
                 </ol>
             </div>
-            
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 9: Perspectivas de la Economía Global</strong></h4>
                 <img src="img/foro 9.jpeg" alt="FORO 9" class="foro-img">
                 <ol>
-                    <li><strong>Tópico A:</strong> Retos económicos en países en vías de desarrollo en el contexto actual</li>
-                    <li><strong>Tópico B:</strong> Criptomonedas y su papel en las economías emergentes: oportunidades y riesgos</li>
+                    <li><strong>Tópico A:</strong> Retos económicos en países en vías de desarrollo en el contexto
+                        actual</li>
+                    <li><strong>Tópico B:</strong> Criptomonedas y su papel en las economías emergentes: oportunidades y
+                        riesgos</li>
                 </ol>
             </div>
-            
-            <div class="cuadro-dorado" style="margin:0 auto 28px auto; text-align:center; float:none;">
+
+            <div class="cuadro-dorado foro">
                 <h4><strong>FORO 10: Infancia, Derechos y Medioambiente (UNICEF)</strong></h4>
                 <img src="img/foro 10.jpeg" alt="FORO 10" class="foro-img">
                 <ol>
-                    <li><strong>Tópico A:</strong> Efectos de la contaminación atmosférica por incendios forestales en la salud infantil</li>
-                    <li><strong>Tópico B:</strong> Discriminación por orientación sexual en la niñez: visibilidad, derechos y protección</li>
+                    <li><strong>Tópico A:</strong> Efectos de la contaminación atmosférica por incendios forestales en
+                        la salud infantil</li>
+                    <li><strong>Tópico B:</strong> Discriminación por orientación sexual en la niñez: visibilidad,
+                        derechos y protección</li>
                 </ol>
             </div>
-        </div>    
-
-            <div class="saludo-titulo-destacado"
-                style="max-width:700px; margin: 0 auto 24px auto; padding-right: 16px;">
-                <h3 class="inversion-titulo"
-                    style="margin:0; color:#fff; font-size:1.28em; letter-spacing:1.2px; font-weight:bold; text-align:left; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); border-radius: 14px 14px 14px 14px; padding: 18px 28px; box-shadow: 0 4px 18px #23305a33;">
-                    INFORMACIÓN ADICIONAL</h3>
-            </div>
-            <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:left;">
-                <li>Todos los participantes recibirán capacitaciones previas al debate.</li>
-                <li>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</li>
-                <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento</li>
-            </div>
         </div>
+
+        <div class="saludo-titulo-destacado" style="max-width:700px; margin: 0 auto 24px auto; padding-right: 16px;">
+            <h3 class="inversion-titulo"
+                style="margin:0; color:#fff; font-size:1.28em; letter-spacing:1.2px; font-weight:bold; text-align:left; background: linear-gradient(90deg, #23305a 0%, #2e71df 100%); border-radius: 14px 14px 14px 14px; padding: 18px 28px; box-shadow: 0 4px 18px #23305a33;">
+                INFORMACIÓN ADICIONAL</h3>
+        </div>
+        <div class="cuadro-dorado info-adicional">
+    <ul>
+        <li>Todos los participantes recibirán capacitaciones previas al debate.</li>
+        <li>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</li>
+        <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento</li>
+    </ul>
+</div>
+    </div>
     </div>
 
     <!-- Redes Sociales (footer) -->
@@ -1271,20 +1336,19 @@
             <strong>SÍGUENOS EN REDES SOCIALES</strong>
         </h4>
     </div>
-       <div class="cuadro-dorado" style="max-width:420px; width:auto; margin: 0 auto 24px auto; text-align:center; display: flex; flex-direction: column; align-items: center;">
-        <div class="redes-sociales-botones" style="justify-content:center; margin:0 auto; align-items:center;">
-            <a href="https://www.instagram.com/bolmun_christa?igsh=MWE3YXZwMzMxYTJlOQ==" target="_blank"
-                class="boton-instagram" style="display: flex; align-items: center;">
-                <img src="img/Instagram.jpeg" alt="Instagram">
-                <strong>BOLMUN INSTAGRAM</strong>
-            </a>
-            <a href="https://www.tiktok.com/@bolmun_christa?_r=1&_d=dgiagblm5bm3hd&sec_uid=MS4wLjABAAAAswOyBqqvIwRdzitxGGCCxBYoR-v6y5-H5mio_D8U4RiCaZppSNXCq3YTuIicTT91&share_author_id=7486483979118789637&sharer_language=es&source=h5_m&u_code=db831d8a2jk4a7&timestamp=1748026900&user_id=6801283179456119813&sec_user_id=MS4wLjABAAAAxcaST7xaQBgL-wuI9lI_yhuepvKbOU_K3oEBgkByVudlDsYkgIvMpXXbbTltqxyD&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7507362934295054086&share_link_id=bf5d1595-5b8c-4dc1-b0e6-4a31bb9ee577&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b5836&social_share_type=5&enable_checksum=1"
-                target="_blank" class="boton-tiktok" style="display: flex; align-items: center;">
-                <img src="img/tiktok.jpeg" alt="TikTok">
-                <strong>BOLMUN TIKTOK</strong>
-            </a>
-        </div>
+   <div class="cuadro-dorado cuadro-redes">
+    <div class="redes-sociales-botones">
+        <a href="https://www.instagram.com/bolmun_christa?igsh=MWE3YXZwMzMxYTJlOQ==" target="_blank" class="boton-instagram">
+            <img src="img/Instagram.jpeg" alt="Instagram">
+            <strong>BOLMUN INSTAGRAM</strong>
+        </a>
+        <a href="https://www.tiktok.com/@bolmun_christa?_r=1&_d=dgiagblm5bm3hd&sec_uid=MS4wLjABAAAAswOyBqqvIwRdzitxGGCCxBYoR-v6y5-H5mio_D8U4RiCaZppSNXCq3YTuIicTT91&share_author_id=7486483979118789637&sharer_language=es&source=h5_m&u_code=db831d8a2jk4a7&timestamp=1748026900&user_id=6801283179456119813&sec_user_id=MS4wLjABAAAAxcaST7xaQBgL-wuI9lI_yhuepvKbOU_K3oEBgkByVudlDsYkgIvMpXXbbTltqxyD&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7507362934295054086&share_link_id=bf5d1595-5b8c-4dc1-b0e6-4a31bb9ee577&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b5836&social_share_type=5&enable_checksum=1"
+           target="_blank" class="boton-tiktok">
+            <img src="img/tiktok.jpeg" alt="TikTok">
+            <strong>BOLMUN TIKTOK</strong>
+        </a>
     </div>
+</div>
 
     <footer>
         <p style="margin:0; font-size:0.9em;">&copy; 2025 BOLMUN CHRISTA.</p>

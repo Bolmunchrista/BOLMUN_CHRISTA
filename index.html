@@ -1005,7 +1005,72 @@
             animation: fadeInUp 0.7s both;
             opacity: 1 !important;
         }
-
+        
+                /* Cuadro para información adicional */
+        .cuadro-dorado.info-adicional {
+            max-width: 700px;
+            margin: 0 auto 24px auto;
+            text-align: left;
+            font-weight: normal;
+        }
+        
+        /* Cuadro para redes sociales */
+        .cuadro-dorado.cuadro-redes {
+            max-width: 420px;
+            width: auto;
+            margin: 0 auto 24px auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: normal;
+        }
+        
+        /* Cuadro para foros */
+        .cuadro-dorado.foro {
+            max-width: 700px;
+            margin: 0 auto 28px auto;
+            text-align: center;
+            float: none;
+            font-weight: normal;
+        }
+        
+        /* Centrar imágenes de foros */
+        .cuadro-dorado .foro-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 320px;
+            width: 95%;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px #004aab33;
+            border: 2.5px solid #dfbb77;
+            background: #fffbe9;
+            object-fit: cover;
+        }
+        
+        /* Ajuste de listas en foros */
+        .cuadro-dorado.foro ol {
+            display: block;
+            margin: 0 auto 0 auto;
+            padding-left: 1.2em;
+            text-align: left;
+            max-width: 95%;
+        }
+        
+        .cuadro-dorado.foro h4,
+        .cuadro-dorado.foro strong,
+        .cuadro-dorado.foro li {
+            white-space: normal !important;
+            word-break: break-word !important;
+            overflow-wrap: break-word !important;
+            text-align: left;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 95%;
+        }
         
         
     </style>
@@ -1320,9 +1385,9 @@
         </div>
         <div class="cuadro-dorado info-adicional">
     <ul>
-        <li>Todos los participantes recibirán capacitaciones previas al debate.</li>
+        <li><strong>Todos los participantes recibirán capacitaciones previas al debate.</li>
         <li>Las fechas de las simulaciones se publicarán en nuestras redes sociales.</li>
-        <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento</li>
+        <li>Los participantes deben comprometerse a seguir el protocolo oficial del evento</strong></li>
     </ul>
 </div>
     </div>

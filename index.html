@@ -516,6 +516,28 @@
                 gap: 7px;
             }
         }
+                /* Ajuste para que el cuadro dorado y su contenido no se desborden */
+        .cuadro-dorado {
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 700px;
+            overflow: hidden;
+            word-break: break-word;
+        }
+        
+        /* Ajuste para imágenes de foros dentro del cuadro dorado */
+        .cuadro-dorado .foro-img {
+            display: block;
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 18px auto;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px #004aab33;
+            border: 2.5px solid #dfbb77;
+            background: #fffbe9;
+            object-fit: cover;
+        }
 
         .boton-instagram {
             display: inline-flex;
@@ -1249,7 +1271,7 @@
             <strong>SÍGUENOS EN REDES SOCIALES</strong>
         </h4>
     </div>
-     <div class="cuadro-dorado" style="max-width:700px; margin: 0 auto 24px auto; text-align:center;">
+       <div class="cuadro-dorado" style="max-width:420px; width:auto; margin: 0 auto 24px auto; text-align:center; display: flex; flex-direction: column; align-items: center;">
         <div class="redes-sociales-botones" style="justify-content:center; margin:0 auto; align-items:center;">
             <a href="https://www.instagram.com/bolmun_christa?igsh=MWE3YXZwMzMxYTJlOQ==" target="_blank"
                 class="boton-instagram" style="display: flex; align-items: center;">

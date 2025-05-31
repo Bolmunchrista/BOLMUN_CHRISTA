@@ -101,6 +101,15 @@
             box-sizing: border-box;
         }
 
+        @media (max-width: 480px) {
+
+            .foro-img,
+            .qr-img {
+                max-width: 80%;
+                width: 85%;
+            }
+        }
+
         .foro-img:hover,
         .qr-img:hover {
             transform: scale(1.03) rotate(-1deg);
@@ -176,7 +185,7 @@
         /* --- Botón formulario --- */
         .boton-formulario {
             display: inline-block;
-            padding: 12px 28px;
+            padding: 12px 24px;
             background-color: var(--primary-yellow);
             color: #003366;
             font-size: 1.1em;
@@ -335,8 +344,8 @@
         }
 
         .foros-tematicas-centrado ol {
-            padding-left: 18px;
-            margin: 0 0 18px 0;
+            padding-left: 14px;
+            margin: 0 0 14px 0;
             text-align: left;
             display: inline-block;
             width: 100%;
@@ -346,13 +355,17 @@
         .foros-tematicas-centrado li {
             list-style: disc;
             margin-bottom: 8px;
-            font-size: 1.05em;
+            font-size: 0.95em;
+            /* reducido */
+            line-height: 1.4em;
+            /* mejora lectura */
             text-align: left;
             padding-left: 2px;
             word-break: break-word;
             width: 100%;
             box-sizing: border-box;
         }
+
 
         /* --- Animación de entrada --- */
         @keyframes fadeInUp {

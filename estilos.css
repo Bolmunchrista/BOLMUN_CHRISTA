@@ -404,83 +404,83 @@ body {
 }
 
 @media (max-width: 600px) {
-  body {
-    font-size: 0.9em;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    overflow-x: hidden;
-  }
+    body {
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
 
-  header {
-    padding: 10px;
-    text-align: center;
-  }
+    header {
+        padding: 10px;
+        text-align: center;
+    }
 
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    gap: 10px;
-  }
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        gap: 10px;
+    }
 
-  nav a {
-    font-size: 0.9em;
-    padding: 10px;
-  }
+    nav a {
+        font-size: 0.9em;
+        padding: 10px;
+    }
 
-  .logo {
-    width: 120px;
-    height: auto;
-    margin: 10px 0;
-  }
+    .logo {
+        width: 120px;
+        height: auto;
+        margin: 10px 0;
+    }
 
-  .foro-img,
-  .qr-img {
-    width: 90%;
-    max-width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: block;
-  }
+    .foro-img,
+    .qr-img {
+        width: 90%;
+        max-width: 100%;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+    }
 
-  .foros-titulo {
-    font-size: 1.1em;
-    margin: 15px 10px;
-    text-align: center;
-  }
+    .foros-titulo {
+        font-size: 1.1em;
+        margin: 15px 10px;
+        text-align: center;
+    }
 
-  .cuadro-dorado {
-    font-size: 0.95em;
-    padding: 10px;
-    width: 90%;
-    margin: 10px auto;
-    word-break: break-word;
-  }
+    .cuadro-dorado {
+        font-size: 0.95em;
+        padding: 10px;
+        width: 90%;
+        margin: 10px auto;
+        word-break: break-word;
+    }
 
-  .enlace-cuadro {
-    font-size: 0.9em;
-    padding: 8px 12px;
-    margin: 5px auto;
-    display: block;
-    text-align: center;
-  }
+    .enlace-cuadro {
+        font-size: 0.9em;
+        padding: 8px 12px;
+        margin: 5px auto;
+        display: block;
+        text-align: center;
+    }
 
-  .boton-instagram,
-  .boton-tiktok {
-    font-size: 1em;
-    padding: 12px 20px;
-    width: 90%;
-    margin: 10px auto;
-    display: block;
-    text-align: center;
-  }
+    .boton-instagram,
+    .boton-tiktok {
+        font-size: 1em;
+        padding: 12px 20px;
+        width: 90%;
+        margin: 10px auto;
+        display: block;
+        text-align: center;
+    }
 
-  footer {
-    font-size: 0.8em;
-    padding: 10px;
-    text-align: center;
-  }
+    footer {
+        font-size: 0.8em;
+        padding: 10px;
+        text-align: center;
+    }
 }
 
 
@@ -668,58 +668,105 @@ footer {
         /* para permitir scroll si algo es muy ancho */
     }
 }
+
 /* Corrección SOLO para celulares */
 @media screen and (max-width: 768px) {
-  html, body {
-    overflow-x: hidden;
-  }
 
-  /* Asegurar que los contenedores no se desborden */
-  .foros-tematicas-centrado,
-  .cuadro-dorado,
-  .foro,
-  .info-adicional,
-  .cuadro-redes {
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-  }
+    html,
+    body {
+        overflow-x: hidden;
+    }
 
-  /* Imágenes adaptables dentro de foros y redes */
-  .foro-img,
-  .qr-img,
-  .cuadro-redes img {
-    width: 100%;
+    /* Asegurar que los contenedores no se desborden */
+    .foros-tematicas-centrado,
+    .cuadro-dorado,
+    .foro,
+    .info-adicional,
+    .cuadro-redes {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow-x: hidden;
+    }
+
+    /* Imágenes adaptables dentro de foros y redes */
+    .foro-img,
+    .qr-img,
+    .cuadro-redes img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Texto largo y títulos se ajustan bien */
+    .saludo-titulo-destacado,
+    .onu-titulo,
+    .foros-titulo {
+        word-break: break-word;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* Asegurar botones y links se adapten al ancho */
+    .boton-formulario,
+    .boton-instagram,
+    .boton-tiktok {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    /* Botones dentro de redes sociales no se salgan */
+    .redes-sociales-botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+/* Contenedor del logo CINU */
+/* Contenedor del logo CINU */
+.cinu-logo {
+    text-align: center;
+    margin: 30px 0;
+    padding: 10px;
+    animation: fadeInUp 0.8s;
+}
+
+/* Estilo de la imagen */
+.logo-cinu {
+    width: 450px;
+    /* Aumenté el tamaño de 130px a 180px para PC */
     height: auto;
-    display: block;
-  }
+    border-radius: 10px;
+    border: 3px solid #dfbb77;
+    box-shadow: 0 4px 15px rgba(0, 74, 171, 0.25);
+    background: white;
+    padding: 8px;
+    transition: all 0.3s ease;
+    object-fit: contain;
+}
 
-  /* Texto largo y títulos se ajustan bien */
-  .saludo-titulo-destacado,
-  .onu-titulo,
-  .foros-titulo {
-    word-break: break-word;
-    text-align: center;
-    padding: 0 10px;
-  }
+/* Efecto hover interactivo */
+.logo-cinu:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 8px 20px rgba(0, 74, 171, 0.35);
+    border-color: #004aab;
+}
 
-  /* Asegurar botones y links se adapten al ancho */
-  .boton-formulario,
-  .boton-instagram,
-  .boton-tiktok {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
+/* Ajustes para móviles */
+@media (max-width: 600px) {
+    .cinu-logo {
+        margin: 20px 0;
+    }
 
-  /* Botones dentro de redes sociales no se salgan */
-  .redes-sociales-botones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
+    .logo-cinu {
+        width: 110px;
+        /* Mantiene el tamaño pequeño en móviles */
+        border-width: 2px;
+        padding: 6px;
+    }
 }

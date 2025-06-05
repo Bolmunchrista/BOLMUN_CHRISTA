@@ -404,206 +404,85 @@ body {
 }
 
 @media (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+  }
 
-    html,
-    body {
-        width: 100% !important;
-        min-width: 0 !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-    }
+  header {
+    padding: 10px;
+    text-align: center;
+  }
 
-    body {
-        font-size: 0.98em !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    gap: 10px;
+  }
 
-    .cuadro-dorado,
-    .cuadro-info,
-    .cuadro-redes,
-    .info-adicional,
-    .foro {
-        padding: 10px 2vw 8px 2vw !important;
-        font-size: 0.98em !important;
-        border-radius: 9px !important;
-        max-width: 99vw !important;
-        width: calc(100% - 20px) !important;
-        margin: 0 10px !important;
-        box-sizing: border-box !important;
-        overflow-x: auto !important;
-    }
+  nav a {
+    font-size: 0.9em;
+    padding: 10px;
+  }
 
-    .foro-img,
-    .qr-img {
-        max-width: 98vw !important;
-        width: 98vw !important;
-        height: auto !important;
-        border-radius: 10px !important;
-        margin-bottom: 12px !important;
-        margin-top: 0 !important;
-        display: block !important;
-        object-fit: contain !important;
-        box-sizing: border-box !important;
-    }
+  .logo {
+    width: 120px;
+    height: auto;
+    margin: 10px 0;
+  }
 
-    .redes-sociales-botones {
-        margin-left: 0 !important;
-        gap: 10px !important;
-        width: 100% !important;
-        align-items: center !important;
-        box-sizing: border-box !important;
-    }
+  .foro-img,
+  .qr-img {
+    width: 90%;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+  }
 
-    .boton-instagram,
-    .boton-tiktok {
-        width: 98vw !important;
-        max-width: 99vw !important;
-        font-size: 1.05em !important;
-        padding: 14px 0 !important;
-        border-radius: 8px !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-    }
+  .foros-titulo {
+    font-size: 1.1em;
+    margin: 15px 10px;
+    text-align: center;
+  }
 
-    .boton-instagram img,
-    .boton-tiktok img {
-        width: 32px !important;
-        height: 32px !important;
-        margin-right: 10px !important;
-        border-radius: 8px !important;
-        object-fit: cover !important;
-    }
+  .cuadro-dorado {
+    font-size: 0.95em;
+    padding: 10px;
+    width: 90%;
+    margin: 10px auto;
+    word-break: break-word;
+  }
 
-    .foros-titulo {
-        font-size: 1.08em !important;
-        padding: 12px 0 !important;
-        border-radius: 9px !important;
-        margin-bottom: 18px !important;
-        width: 98vw !important;
-        max-width: 99vw !important;
-        box-sizing: border-box !important;
-    }
+  .enlace-cuadro {
+    font-size: 0.9em;
+    padding: 8px 12px;
+    margin: 5px auto;
+    display: block;
+    text-align: center;
+  }
 
-    .saludo-titulo-destacado {
-        max-width: 99vw !important;
-        padding: 0 2vw !important;
-        width: 99vw !important;
-        box-sizing: border-box !important;
-    }
+  .boton-instagram,
+  .boton-tiktok {
+    font-size: 1em;
+    padding: 12px 20px;
+    width: 90%;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+  }
 
-    .onu-titulo {
-        font-size: 1em !important;
-        padding: 10px 2vw !important;
-        border-radius: 9px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .menu-desplegable {
-        top: 6px !important;
-        right: 6px !important;
-    }
-
-    .menu-boton {
-        padding: 6px 10px !important;
-        font-size: 0.95em !important;
-    }
-
-    .menu-contenido {
-        min-width: 120px !important;
-        padding: 7px 4px !important;
-        border-radius: 10px !important;
-    }
-
-    .menu-title {
-        font-size: 0.95em !important;
-        padding: 6px 6px !important;
-        border-radius: 5px !important;
-    }
-
-    .foros-tematicas-centrado {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        width: 99vw !important;
-        max-width: 99vw !important;
-        box-sizing: border-box !important;
-    }
-
-    .foros-tematicas-centrado .cuadro-dorado {
-        margin-bottom: 18px !important;
-        margin-top: 0 !important;
-        padding: 10px 2vw 10px 2vw !important;
-        box-sizing: border-box !important;
-    }
-
-    .foros-tematicas-centrado h4 {
-        font-size: 1.05em !important;
-        margin-bottom: 8px !important;
-        margin-top: 0 !important;
-    }
-
-    .foros-tematicas-centrado ol {
-        padding-left: 12px !important;
-        margin: 0 0 10px 0 !important;
-        width: 98vw !important;
-        max-width: 99vw !important;
-        box-sizing: border-box !important;
-    }
-
-    .foros-tematicas-centrado li {
-        font-size: 0.99em !important;
-        margin-bottom: 6px !important;
-        text-align: left !important;
-        padding-left: 2px !important;
-        width: 98vw !important;
-        max-width: 99vw !important;
-        box-sizing: border-box !important;
-    }
-
-    ul,
-    ol {
-        width: 98vw !important;
-        max-width: 99vw !important;
-        padding-left: 10px !important;
-        box-sizing: border-box !important;
-    }
-
-    .centrado {
-        text-align: center !important;
-        padding: 0 !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    .boton-formulario {
-        width: 98vw !important;
-        max-width: 99vw !important;
-        font-size: 1.05em !important;
-        padding: 12px 0 !important;
-        margin-top: 12px !important;
-        border-radius: 8px !important;
-        box-sizing: border-box !important;
-    }
-
-    footer {
-        font-size: 0.98em !important;
-        padding: 18px 0 10px 0 !important;
-        width: 100vw !important;
-        min-width: 0 !important;
-        max-width: 100vw !important;
-        box-sizing: border-box !important;
-        overflow-x: hidden !important;
-    }
-
-    .cuadro-dorado#redes {
-        margin-left: 0 !important;
-        width: 99vw !important;
-        max-width: 99vw !important;
-        padding: 10px 2vw !important;
-        box-sizing: border-box !important;
-    }
+  footer {
+    font-size: 0.8em;
+    padding: 10px;
+    text-align: center;
+  }
 }
+
 
 /* --- Utilidades --- */
 .centrado {

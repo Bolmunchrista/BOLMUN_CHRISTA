@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOLMUN CHRISTA</title>
 
-   <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="estilos.css">
 
 </head>
 
 <body>
     <header style="background: none; padding: 0; box-shadow: none;">
-    <img src="img/Heidens.png" alt="Heidens" class="imagen-header">
+        <img src="img/Heidens.png" alt="Heidens" class="imagen-header">
     </header>
 
     <script>
@@ -156,11 +156,16 @@
         <p>Pueden participar estudiantes del nivel secundario y universitario hasta el tercer semestre. Inscripciones en
             el siguiente enlace o escaneando el código QR:</p>
         <div class="centrado">
-            <img src="img/Qr.jpeg" alt="Qr Formulario" class="qr-img">
-            <br>
-            <a href="#inscripcion" class="boton-formulario"
-                onclick="document.getElementById('inscripcion').scrollIntoView({behavior: 'smooth'}); return false;">Formulario
-                de Inscripción</a>
+            <div class="qr-container">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScmnIRGLcLSHPp6IKlfH02wGGz-vsvDtuxTmcHDBXpfSveYHQ/viewform?usp=header"
+                    target="_blank" rel="noopener noreferrer" id="qr-link">
+                    <img src="img/Qr.jpeg" alt="QR para acceder al Formulario de Inscripción" class="qr-img">
+                </a>
+            </div>
+
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScmnIRGLcLSHPp6IKlfH02wGGz-vsvDtuxTmcHDBXpfSveYHQ/viewform?usp=header" class="boton-formulario" onclick="smoothScroll('inscripcion')">Formulario de
+                Inscripción</a>
+
         </div>
     </div>
     <!-- Inversión -->
@@ -177,12 +182,35 @@
     </div>
 
     <!-- Foros y Temáticas en cuadros dorados separados -->
-    <div
-        style="background:rgba(255, 230, 160, 0.45); box-shadow:0 8px 32px #dfbb7740, 0 2px 8px #dfbb7740; border-radius:22px; padding:32px 0 32px 0; margin:0 auto 48px auto; max-width:820px;">
-        <div style="max-width:760px; margin: 0 auto; text-align:center;">
+    <!-- Contenedor principal - Ahora 100% responsive -->
+    <div style="
+    background: rgba(255, 230, 160, 0.45);
+    box-shadow: 0 8px 32px #dfbb7740, 0 2px 8px #dfbb7740;
+    border-radius: 22px;
+    padding: 24px 0;
+    margin: 0 auto 48px auto;
+    max-width: 820px;
+    width: 90%; /* Ajuste clave para móvil */
+    box-sizing: border-box;
+">
+        <!-- Contenedor interno ajustado -->
+        <div style="
+        max-width: 760px;
+        width: 90%; /* Ajuste clave para móvil */
+        margin: 0 auto;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 0 10px; /* Padding seguro para móvil */
+    ">
             <div class="foros-titulo">FOROS Y TEMÁTICAS</div>
         </div>
-        <div id="foros" class="foros-tematicas-centrado">
+
+        <!-- Contenedor de foros - 100% responsive -->
+        <div id="foros" class="foros-tematicas-centrado" style="
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
+    ">
             <div class="cuadro-dorado foro">
                 <h4><strong>FORO 1: Desafíos Económicos Actuales en Bolivia (foro nacional)</strong></h4>
                 <img src="img/foro 1.jpg" alt="FORO 1" class="foro-img">
@@ -237,9 +265,9 @@
                     <li><strong>Tópico A:</strong></li>
                     <p>Impacto de la deforestación en los ecosistemas y comunidades locales</p>
                     </p>
-                    <li><strong>Tópico B:</strong></li> 
+                    <li><strong>Tópico B:</strong></li>
                     <p>Problemática de la contaminación plástica y sus alternativas
-                    sostenibles</p>
+                        sostenibles</p>
                 </ol>
             </div>
             <div class="cuadro-dorado foro">
@@ -270,10 +298,10 @@
                 <img src="img/foro 8.jpeg" alt="FORO 8" class="foro-img">
                 <ol>
                     <li><strong>Tópico A:</strong></li>
-                         <p>Análisis de grupos extremistas y su impacto en la estabilidad
+                    <p>Análisis de grupos extremistas y su impacto en la estabilidad
                         internacional</p>
                     <li><strong>Tópico B:</strong></li>
-                         <p>Situaciones de tensión prolongada en regiones con alta conflictividad
+                    <p>Situaciones de tensión prolongada en regiones con alta conflictividad
                         sociopolítica</p>
                 </ol>
             </div>
@@ -282,10 +310,10 @@
                 <img src="img/foro 9.jpeg" alt="FORO 9" class="foro-img">
                 <ol>
                     <li><strong>Tópico A:</strong></li>
-                        <p> Retos económicos en países en vías de desarrollo en el contexto
+                    <p> Retos económicos en países en vías de desarrollo en el contexto
                         actual</p>
                     <li><strong>Tópico B:</strong></li>
-                         <p>Criptomonedas y su papel en las economías emergentes: oportunidades y
+                    <p>Criptomonedas y su papel en las economías emergentes: oportunidades y
                         riesgos</p>
                 </ol>
             </div>
@@ -294,10 +322,10 @@
                 <img src="img/foro 10.jpeg" alt="FORO 10" class="foro-img">
                 <ol>
                     <li><strong>Tópico A:</strong></li>
-                        <p>Efectos de la contaminación atmosférica por incendios forestales en
+                    <p>Efectos de la contaminación atmosférica por incendios forestales en
                         la salud infantil</p>
-                    <li><strong>Tópico B:</strong></li> 
-                        <p>Discriminación por orientación sexual en la niñez: visibilidad,
+                    <li><strong>Tópico B:</strong></li>
+                    <p>Discriminación por orientación sexual en la niñez: visibilidad,
                         derechos y protección</p>
                 </ol>
             </div>

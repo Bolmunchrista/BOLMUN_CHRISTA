@@ -400,7 +400,7 @@ body {
 
     html,
     body {
-        width: 100vw !important;
+        width: 100% !important;
         min-width: 0 !important;
         max-width: 100vw !important;
         overflow-x: hidden !important;
@@ -421,9 +421,8 @@ body {
         font-size: 0.98em !important;
         border-radius: 9px !important;
         max-width: 99vw !important;
-        width: 99vw !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
+        width: calc(100% - 20px) !important;
+        margin: 0 10px !important;
         box-sizing: border-box !important;
         overflow-x: auto !important;
     }
@@ -686,12 +685,18 @@ footer {
         overflow-x: hidden !important;
     }
 }
+
 .imagen-header {
-    width: 100vw;             /* Ocupar todo el ancho de la pantalla */
-    max-width: 100%;          /* No limitar el ancho */
-    height: auto;             /* Altura proporcional */
-    object-fit: contain;      /* Mostrar la imagen completa, sin recortes */
-    object-position: center;  /* Centrar si sobra espacio */
+    width: 100vw;
+    /* Ocupar todo el ancho de la pantalla */
+    max-width: 100%;
+    /* No limitar el ancho */
+    height: auto;
+    /* Altura proporcional */
+    object-fit: contain;
+    /* Mostrar la imagen completa, sin recortes */
+    object-position: center;
+    /* Centrar si sobra espacio */
     display: block;
     margin: 0 auto;
     box-sizing: border-box;
@@ -702,5 +707,24 @@ footer {
         width: 100vw !important;
         height: auto !important;
         object-fit: contain !important;
+    }
+}
+/* Para móviles */
+@media (max-width: 600px) {
+    .foros-titulo {
+        font-size: 1.2em !important; /* Texto más legible */
+        padding: 12px 0 !important;
+    }
+
+    .cuadro-dorado.foro {
+        padding: 15px !important; /* Espaciado interno seguro */
+        margin-bottom: 20px !important;
+    }
+}
+
+/* Para desktop */
+@media (min-width: 601px) {
+    .foros-tematicas-centrado {
+        padding: 0 20px !important; /* Más espacio lateral */
     }
 }

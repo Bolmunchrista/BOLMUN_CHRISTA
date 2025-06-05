@@ -1,6 +1,6 @@
 // Animaciones de aparición para imágenes
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const images = document.querySelectorAll('img.logo, .text-center img, .centrado img');
   images.forEach(img => {
     img.style.opacity = 0;

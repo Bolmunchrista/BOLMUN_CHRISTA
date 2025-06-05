@@ -56,6 +56,10 @@ body {
     box-sizing: border-box;
     overflow: hidden;
     word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+
 }
 
 .cuadro-dorado.foro {
@@ -114,13 +118,16 @@ body {
 .redes-sociales-botones {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-left: 13%;
+    align-items: center;
+    /* Asegura que todo se mantenga dentro */
+    margin-left: 0;
+    padding: 0 16px;
     gap: 14px;
-    animation: fadeInUp 0.7s 0.2s both;
     width: 100%;
     box-sizing: border-box;
 }
+
+
 
 .boton-instagram,
 .boton-tiktok {
@@ -709,15 +716,18 @@ footer {
         object-fit: contain !important;
     }
 }
+
 /* Para móviles */
 @media (max-width: 600px) {
     .foros-titulo {
-        font-size: 1.2em !important; /* Texto más legible */
+        font-size: 1.2em !important;
+        /* Texto más legible */
         padding: 12px 0 !important;
     }
 
     .cuadro-dorado.foro {
-        padding: 15px !important; /* Espaciado interno seguro */
+        padding: 15px !important;
+        /* Espaciado interno seguro */
         margin-bottom: 20px !important;
     }
 }
@@ -725,6 +735,112 @@ footer {
 /* Para desktop */
 @media (min-width: 601px) {
     .foros-tematicas-centrado {
-        padding: 0 20px !important; /* Más espacio lateral */
+        padding: 0 20px !important;
+        /* Más espacio lateral */
     }
+}
+
+.foro,
+.cuadro-dorado,
+.cuadro-info,
+.cuadro-redes,
+.info-adicional {
+    overflow-x: auto !important;
+    word-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+.foros-tematicas-centrado ol,
+.foros-tematicas-centrado li {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+
+@media (max-width: 600px) {
+
+    .foro,
+    .cuadro-dorado,
+    .cuadro-info,
+    .cuadro-redes,
+    .info-adicional {
+        overflow-x: auto !important;
+        display: block;
+    }
+
+    .foros-tematicas-centrado {
+        overflow-x: auto !important;
+        display: block;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .cuadro-dorado,
+    .cuadro-info,
+    .cuadro-redes,
+    .info-adicional,
+    .foro {
+        max-width: 100vw !important;
+        width: 100% !important;
+        margin: 0 auto 24px auto !important;
+        padding: 12px 4vw !important;
+        overflow-x: auto !important;
+        /* para permitir scroll si algo es muy ancho */
+    }
+}
+/* Corrección SOLO para celulares */
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Asegurar que los contenedores no se desborden */
+  .foros-tematicas-centrado,
+  .cuadro-dorado,
+  .foro,
+  .info-adicional,
+  .cuadro-redes {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  /* Imágenes adaptables dentro de foros y redes */
+  .foro-img,
+  .qr-img,
+  .cuadro-redes img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Texto largo y títulos se ajustan bien */
+  .saludo-titulo-destacado,
+  .onu-titulo,
+  .foros-titulo {
+    word-break: break-word;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Asegurar botones y links se adapten al ancho */
+  .boton-formulario,
+  .boton-instagram,
+  .boton-tiktok {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Botones dentro de redes sociales no se salgan */
+  .redes-sociales-botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 }

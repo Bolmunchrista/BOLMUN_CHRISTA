@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-    --primary-yellow: #dfbb77;
+    --primary-yellow: #dfbb77
 }
 
 html,
@@ -595,27 +595,60 @@ footer {
     }
 }
 
-.imagen-header {
-    width: 100vw;
-    /* Ocupar todo el ancho de la pantalla */
-    max-width: 100%;
-    /* No limitar el ancho */
-    height: auto;
-    /* Altura proporcional */
-    object-fit: contain;
-    /* Mostrar la imagen completa, sin recortes */
-    object-position: center;
-    /* Centrar si sobra espacio */
-    display: block;
-    margin: 0 auto;
-    box-sizing: border-box;
+/* --- Contenedor Principal del Header --- */
+.header-container {
+    width: 1450px;
+    height: 130vh;
+    /* Ocupa toda la altura visible */
+    max-height: 800px;
+    /* Máximo igual a la altura de tu imagen */
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    /* Color de fondo mientras carga */
 }
 
+/* --- Imagen del Header --- */
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cubre todo el espacio manteniendo proporción */
+    object-position: center center;
+    /* Centra la imagen */
+    min-width: 1450px;
+    /* Ancho mínimo igual al de tu imagen */
+    min-height: 800px;
+    /* Altura mínima igual al de tu imagen */
+}
+
+/* --- Ajustes para mantener relación de aspecto --- */
+@media (max-aspect-ratio: 2/1) {
+
+    /* Cuando la pantalla es más alta que 2:1 */
+    .header-img {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 2/1) {
+
+    /* Cuando la pantalla es más ancha que 2:1 */
+    .header-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* --- Ajustes para móviles --- */
 @media (max-width: 600px) {
-    .imagen-header {
-        width: 100vw !important;
-        height: auto !important;
-        object-fit: contain !important;
+    .header-container {
+        height: 70vh;
+        max-height: none;
     }
 }
 

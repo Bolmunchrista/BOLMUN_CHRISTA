@@ -597,8 +597,8 @@ footer {
 
 /* --- Contenedor Principal del Header --- */
 .header-container {
-    width: 1450px;
-    height: 130vh;
+    width: 1400px;
+    height: 600px;
     /* Ocupa toda la altura visible */
     max-height: 800px;
     /* Máximo igual a la altura de tu imagen */
@@ -615,13 +615,12 @@ footer {
 .header-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
     /* Cubre todo el espacio manteniendo proporción */
-    object-position: center center;
+    object-position: center;
     /* Centra la imagen */
-    min-width: 1450px;
+    min-width: 1200px;
     /* Ancho mínimo igual al de tu imagen */
-    min-height: 800px;
+    min-height: 600px;
     /* Altura mínima igual al de tu imagen */
 }
 
@@ -632,16 +631,10 @@ footer {
         height: 300px;
         max-height: 300px;
         width: 100%;
+        object-position: center;
     }
 }
-.header-container img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center center;
-    min-width: 100%;
-    min-height: 300px;
-}
+
 /* --- Ajustes para foros y cuadros --- */
 /* Para móviles */
 @media (max-width: 600px) {

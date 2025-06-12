@@ -625,33 +625,24 @@ footer {
     /* Altura mínima igual al de tu imagen */
 }
 
-/* --- Ajustes para mantener relación de aspecto --- */
-@media (max-aspect-ratio: 2/1) {
-
-    /* Cuando la pantalla es más alta que 2:1 */
-    .header-img {
-        width: auto;
-        height: 100%;
-    }
-}
-
-@media (min-aspect-ratio: 2/1) {
-
-    /* Cuando la pantalla es más ancha que 2:1 */
-    .header-img {
-        width: 100%;
-        height: auto;
-    }
-}
 
 /* --- Ajustes para móviles --- */
 @media (max-width: 600px) {
     .header-container {
-        height: 70vh;
-        max-height: none;
+        height: 300px;
+        max-height: 300px;
+        width: 100%;
     }
 }
-
+.header-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center center;
+    min-width: 100%;
+    min-height: 300px;
+}
+/* --- Ajustes para foros y cuadros --- */
 /* Para móviles */
 @media (max-width: 600px) {
     .foros-titulo {

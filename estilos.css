@@ -628,10 +628,15 @@ footer {
 /* --- Ajustes para móviles --- */
 @media (max-width: 600px) {
     .header-container {
-        height: 300px;
-        max-height: 300px;
+        height: auto;
+        max-height: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-img {
         width: 100%;
-        object-position: center;
+        height: auto;
     }
 }
 

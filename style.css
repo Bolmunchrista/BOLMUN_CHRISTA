@@ -7,33 +7,50 @@ body {
     background: linear-gradient(135deg, #fffbe9 0%, #ffe9b3 60%, #e6e2d3 100%);
     color: #222;
     min-height: 100vh;
+
+    header {
+        padding: 10px;
+        text-align: center;
+    }
 }
 
-header {
-    background: none;
-    padding: 0;
-    box-shadow: none;
-    width: 100vw;
-    max-width: 100vw;
+.header-container {
+    width: 100%;
+    height: auto;
+    max-height: none;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-header img {
-    width: 100vw;
-    max-width: 100vw;
-    min-width: 100vw;
-    display: block;
-    margin: 0 auto 0 auto;
-    height: 160px;
+/* --- Imagen del Header --- */
+.header-img {
+    width: 100%;
+    height: auto;
     object-fit: cover;
     object-position: center;
+    max-height: 100%;
+    display: block;
+    box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
-    header img {
-        height: 70px !important;
-        min-width: 100vw !important;
-        max-width: 100vw !important;
+    .header-container {
+        height: auto;
+        max-height: none;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .header-img {
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -901,6 +918,7 @@ footer {
         padding: 28px 32px;
     }
 }
+
 .cinu-logo {
     text-align: center;
     margin: 30px 0;

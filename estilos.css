@@ -596,36 +596,33 @@ footer {
 }
 
 /* --- Contenedor Principal del Header --- */
+/* --- Contenedor Principal del Header --- */
 .header-container {
-    width: 1400px;
-    height: 600px;
-    /* Ocupa toda la altura visible */
-    max-height: 800px;
-    /* Máximo igual a la altura de tu imagen */
+    width: 100%;
+    height: auto;
+    max-height: none;
     overflow: hidden;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #f0f0f0;
-    /* Color de fondo mientras carga */
+    flex-direction: column;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* --- Imagen del Header --- */
 .header-img {
     width: 100%;
-    height: 100%;
-    /* Cubre todo el espacio manteniendo proporción */
+    height: auto;
+    object-fit: cover;
     object-position: center;
-    /* Centra la imagen */
-    min-width: 1200px;
-    /* Ancho mínimo igual al de tu imagen */
-    min-height: 600px;
-    /* Altura mínima igual al de tu imagen */
+    max-height: 100%;
+    display: block;
+    box-sizing: border-box;
 }
 
-
-/* --- Ajustes para móviles --- */
 @media (max-width: 600px) {
     .header-container {
         height: auto;
